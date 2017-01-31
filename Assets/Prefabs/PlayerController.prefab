@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4964593896361630}
   - component: {fileID: 114855584704564738}
+  - component: {fileID: 114465932366613918}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -121,8 +122,29 @@ MonoBehaviour:
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 430, y: 180}
-  m_Transitions: []
+  m_Transitions:
+  - m_Destination: {fileID: 114326383372821194}
+    m_EventID: 1870230623
   m_CachedInstanceID: 10332
+  mAttackSpeed: 0
+  mCritChance: 0
+  mDefense: 0
+  mAttack: 0
+--- !u!114 &114465932366613918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250735287676248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc4ed7f5fc6c6045a82abbd69dff304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mStrength: 15
+  mStamina: 15
+  mDexterity: 15
+  mIntelligence: 15
 --- !u!114 &114539376728287698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,8 +162,14 @@ MonoBehaviour:
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: -70, y: 10}
-  m_Transitions: []
+  m_Transitions:
+  - m_Destination: {fileID: 114326383372821194}
+    m_EventID: 1870230623
   m_CachedInstanceID: 10334
+  mAttackSpeed: 0
+  mCritChance: 0
+  mDefense: 0
+  mAttack: 0
 --- !u!114 &114668903527507620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,8 +187,14 @@ MonoBehaviour:
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 380, y: 80}
-  m_Transitions: []
+  m_Transitions:
+  - m_Destination: {fileID: 114326383372821194}
+    m_EventID: 1870230623
   m_CachedInstanceID: 10336
+  mAttackSpeed: 0
+  mCritChance: 0
+  mDefense: 0
+  mAttack: 0
 --- !u!114 &114671373787063508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,8 +212,14 @@ MonoBehaviour:
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 500, y: -60}
-  m_Transitions: []
+  m_Transitions:
+  - m_Destination: {fileID: 114326383372821194}
+    m_EventID: 1870230623
   m_CachedInstanceID: 10338
+  mAttackSpeed: 0
+  mCritChance: 0
+  mDefense: 0
+  mAttack: 0
 --- !u!114 &114707050877591212
 MonoBehaviour:
   m_ObjectHideFlags: 1

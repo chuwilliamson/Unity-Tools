@@ -67,34 +67,31 @@ public class Mercenary : StateBehaviour, IStats
         }
     }
 
-    void Update()
+    void OnEnable()
     {
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            CalculateAtkSpeed();
-            CalculateCritChance();
-            CalculateDefense();
-            CalculateAttack();
-        }
+        CalculateAttackSpeed();
+        CalculateCritChance();
+        CalculateDefense();
+        CalculateAttack();
     }
 
-    public void CalculateAtkSpeed()
+    public void CalculateAttackSpeed()
     {
-        mAttackSpeed = GetComponent<StatModifiers>().Dexterity / 10;
+        mAttackSpeed = GetComponentInParent<StatModifiers>().Dexterity / 10;
     }
 
     public void CalculateCritChance()
     {
-        mCritChance = GetComponent<StatModifiers>().Dexterity / 5;
+        mCritChance = GetComponentInParent<StatModifiers>().Dexterity / 5;
     }
 
     public void CalculateDefense()
     {
-        mDefense = GetComponent<StatModifiers>().Stamina / 2; 
+        mDefense = GetComponentInParent<StatModifiers>().Stamina / 2; 
     }
 
     public void CalculateAttack()
     {
-        mAttack = GetComponent<StatModifiers>().Strength * 5;
+        mAttack = GetComponentInParent<StatModifiers>().Strength * 5;
     }
 }
