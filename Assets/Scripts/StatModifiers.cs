@@ -12,7 +12,7 @@ interface IStats
     void CalculateAttack();
     void CalculateDefense();
     void CalculateCritChance();
-    void CalculateAtkSpeed();
+    void CalculateAttackSpeed();
 }
 
 public class StatModifiers : MonoBehaviour

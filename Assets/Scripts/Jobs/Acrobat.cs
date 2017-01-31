@@ -65,30 +65,27 @@ public class Acrobat : StateBehaviour, IStats
         }
     }
 
-    void Update()
+    void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            CalculateAtkSpeed();
-            CalculateCritChance();
-            CalculateDefense();
-            CalculateAttack();
-        }
+        CalculateAttackSpeed();
+        CalculateCritChance();
+        CalculateDefense();
+        CalculateAttack();
     }
 
-    public void CalculateAtkSpeed()
+    public void CalculateAttackSpeed()
     {
-        mAttackSpeed = GetComponent<StatModifiers>().Dexterity / 5;
+        mAttackSpeed = GetComponentInParent<StatModifiers>().Dexterity / 5;
     }
 
     public void CalculateCritChance()
     {
-        mCritChance = GetComponent<StatModifiers>().Dexterity / 7f;
+        mCritChance = GetComponentInParent<StatModifiers>().Dexterity / 7f;
     }
 
     public void CalculateDefense()
     {
-        mDefense = GetComponent<StatModifiers>().Stamina / 5;
+        mDefense = GetComponentInParent<StatModifiers>().Stamina / 5;
     }
 
     public void CalculateAttack()
