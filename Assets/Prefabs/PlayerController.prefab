@@ -1,0 +1,265 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1250735287676248}
+  m_IsPrefabParent: 1
+--- !u!1 &1250735287676248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4964593896361630}
+  - component: {fileID: 114855584704564738}
+  m_Layer: 0
+  m_Name: PlayerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1288653993500020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4957825447918576}
+  - component: {fileID: 114764699929998910}
+  - component: {fileID: 114707050877591212}
+  - component: {fileID: 114870280626705704}
+  - component: {fileID: 114539376728287698}
+  - component: {fileID: 114427436935442526}
+  - component: {fileID: 114668903527507620}
+  - component: {fileID: 114671373787063508}
+  m_Layer: 0
+  m_Name: FSM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4957825447918576
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4964593896361630}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4964593896361630
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250735287676248}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4957825447918576}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114427436935442526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f9e394074cee04683bf91212a98b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Assist
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 430, y: 180}
+  m_Transitions: []
+  m_CachedInstanceID: -34630
+--- !u!114 &114539376728287698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f0db6f7c5bb344fb78f994fa61331a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Acrobat
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: -70, y: 10}
+  m_Transitions: []
+  m_CachedInstanceID: -34632
+--- !u!114 &114668903527507620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a901d32832d6a479b164c4180d2376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Magician
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 380, y: 80}
+  m_Transitions: []
+  m_CachedInstanceID: -34628
+--- !u!114 &114671373787063508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d575d232f955fd248aeea6e830dd311c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Mercenary
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 280, y: 10}
+  m_Transitions: []
+  m_CachedInstanceID: -34626
+--- !u!114 &114707050877591212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27b962ddfa21461eb78fac1cb2f955f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 0}
+  m_StateName: StateMachine
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 0, y: 0}
+  m_Transitions: []
+  m_CachedInstanceID: -34636
+  m_Description: 
+  m_EnabledState: {fileID: 0}
+  m_LastEnabledState: {fileID: 0}
+  m_StartState: {fileID: 114870280626705704}
+  m_AnyState: {fileID: 0}
+  m_ConcurrentState: {fileID: 0}
+--- !u!114 &114764699929998910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6010b8a58d2afd24f9d167d0ee904732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FloatVars: []
+  m_IntVars: []
+  m_BoolVars: []
+  m_StringVars: []
+  m_Vector3Vars: []
+  m_RectVars: []
+  m_ColorVars: []
+  m_QuaternionVars: []
+  m_GameObjectVars: []
+  m_TextureVars: []
+  m_MaterialVars: []
+  m_ObjectVars: []
+  m_DynamicLists: []
+  m_FsmEvents: []
+  m_ConcreteFsmEvents:
+  - m_ID: 54644675
+    m_Name: ACROBAT
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 913225611
+    m_Name: MERCENARY
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 1346017622
+    m_Name: MAGICIAN
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 590960297
+    m_Name: ASSIST
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  m_Namespace: 
+--- !u!114 &114855584704564738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250735287676248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679817a51c6a69f4aae9eaa2351a39ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+--- !u!114 &114870280626705704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e717dda137026a47ac47e4b6df5a2b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Vagrant
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 90, y: 100}
+  m_Transitions:
+  - m_Destination: {fileID: 114539376728287698}
+    m_EventID: 54644675
+  - m_Destination: {fileID: 114671373787063508}
+    m_EventID: 913225611
+  - m_Destination: {fileID: 114668903527507620}
+    m_EventID: 1346017622
+  - m_Destination: {fileID: 114427436935442526}
+    m_EventID: 590960297
+  m_CachedInstanceID: -34634
