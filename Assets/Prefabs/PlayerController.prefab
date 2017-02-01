@@ -104,7 +104,7 @@ MonoBehaviour:
     m_EventID: 1346017622
   - m_Destination: {fileID: 114427436935442526}
     m_EventID: 590960297
-  m_CachedInstanceID: 17198
+  m_CachedInstanceID: 10032
 --- !u!114 &114427436935442526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,15 +121,15 @@ MonoBehaviour:
   m_StateName: Assist
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: 430, y: 180}
+  m_Position: {x: 510, y: 110}
   m_Transitions:
   - m_Destination: {fileID: 114326383372821194}
     m_EventID: 1870230623
-  m_CachedInstanceID: 17194
-  mAttackSpeed: 0
-  mCritChance: 0
-  mDefense: 0
-  mAttack: 0
+  m_CachedInstanceID: 10028
+  AttackSpeed: 0
+  CritChance: 0
+  Defense: 0
+  Attack: 0
 --- !u!114 &114465932366613918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,10 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc4ed7f5fc6c6045a82abbd69dff304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mStrength: 15
-  mStamina: 15
-  mDexterity: 15
-  mIntelligence: 15
+  Strength: 15
+  Stamina: 15
+  Dexterity: 15
+  Intelligence: 15
 --- !u!114 &114539376728287698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -161,15 +161,15 @@ MonoBehaviour:
   m_StateName: Acrobat
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: -70, y: 10}
+  m_Position: {x: -220, y: 170}
   m_Transitions:
   - m_Destination: {fileID: 114326383372821194}
     m_EventID: 1870230623
-  m_CachedInstanceID: 17190
-  mAttackSpeed: 0
-  mCritChance: 0
-  mDefense: 0
-  mAttack: 0
+  m_CachedInstanceID: 10024
+  AttackSpeed: 0
+  CritChance: 0
+  Defense: 0
+  Attack: 0
 --- !u!114 &114668903527507620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,15 +186,15 @@ MonoBehaviour:
   m_StateName: Magician
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: 380, y: 80}
+  m_Position: {x: 510, y: -80}
   m_Transitions:
   - m_Destination: {fileID: 114326383372821194}
     m_EventID: 1870230623
-  m_CachedInstanceID: 17192
-  mAttackSpeed: 0
-  mCritChance: 0
-  mDefense: 0
-  mAttack: 0
+  m_CachedInstanceID: 10026
+  AttackSpeed: 0
+  CritChance: 0
+  Defense: 0
+  Attack: 0
 --- !u!114 &114671373787063508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,15 +211,15 @@ MonoBehaviour:
   m_StateName: Mercenary
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: 500, y: -60}
+  m_Position: {x: 40, y: 180}
   m_Transitions:
   - m_Destination: {fileID: 114326383372821194}
     m_EventID: 1870230623
-  m_CachedInstanceID: 17188
-  mAttackSpeed: 0
-  mCritChance: 0
-  mDefense: 0
-  mAttack: 0
+  m_CachedInstanceID: 10022
+  AttackSpeed: 0
+  CritChance: 0
+  Defense: 0
+  Attack: 0
 --- !u!114 &114707050877591212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 17202
+  m_CachedInstanceID: 10036
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -325,8 +325,8 @@ MonoBehaviour:
   m_StateName: Vagrant
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: 110, y: -220}
+  m_Position: {x: 120, y: -240}
   m_Transitions:
   - m_Destination: {fileID: 114326383372821194}
     m_EventID: 1870230623
-  m_CachedInstanceID: 17200
+  m_CachedInstanceID: 10034

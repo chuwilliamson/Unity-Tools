@@ -21,21 +21,21 @@ public class Mercenary : StateBehaviour, IStats
 
     public void CalculateAttackSpeed()
     {
-        mAttackSpeed = GetComponentInParent<StatModifiers>().Dexterity / 10;
+        AttackSpeed = GetComponentInParent<StatModifiers>().Dexterity / 10;
     }
 
     public void CalculateCritChance()
     {
-        mCritChance = GetComponentInParent<StatModifiers>().Dexterity / 5;
+        CritChance = GetComponentInParent<StatModifiers>().Dexterity / 5;
     }
 
     public void CalculateDefense()
     {
-        mDefense = GetComponentInParent<StatModifiers>().Stamina / 2; 
+        Defense = GetComponentInParent<StatModifiers>().Stamina / 2; 
     }
 
     public void CalculateAttack()
     {
-        mAttack = GetComponentInParent<StatModifiers>().Strength * 5;
+        Attack = GetComponentInParent<StatModifiers>().Strength * 5;
     }
 }

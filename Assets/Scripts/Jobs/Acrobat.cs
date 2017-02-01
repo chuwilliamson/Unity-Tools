@@ -19,21 +19,21 @@ public class Acrobat : StateBehaviour, IStats
 
     public void CalculateAttackSpeed()
     {
-        mAttackSpeed = GetComponentInParent<StatModifiers>().Dexterity / 5;
+        AttackSpeed = GetComponentInParent<StatModifiers>().Dexterity / 5;
     }
 
     public void CalculateCritChance()
     {
-        mCritChance = GetComponentInParent<StatModifiers>().Dexterity / 7f;
+        CritChance = GetComponentInParent<StatModifiers>().Dexterity / 7f;
     }
 
     public void CalculateDefense()
     {
-        mDefense = GetComponentInParent<StatModifiers>().Stamina / 5;
+        Defense = GetComponentInParent<StatModifiers>().Stamina / 5;
     }
 
     public void CalculateAttack()
     {
-        mAttack = (int)(GetComponent<StatModifiers>().Dexterity * 0.5f);
+        Attack = (int)(GetComponent<StatModifiers>().Dexterity * 0.5f);
     }
 }
