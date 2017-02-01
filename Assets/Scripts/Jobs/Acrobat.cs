@@ -3,67 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using BehaviourMachine;
 public class Acrobat : StateBehaviour, IStats
-{
-    [SerializeField]
-    float mAttackSpeed;
-    [SerializeField]
-    float mCritChance;
-    [SerializeField]
-    int mDefense;
-    [SerializeField]
-    int mAttack;
-
-    public float AttackSpeed
-    {
-        get
-        {
-            return mAttackSpeed;
-        }
-
-        set
-        {
-            mAttackSpeed = value;
-        }
-    }
-
-    public float CriticalChance
-    {
-        get
-        {
-            return mCritChance;
-        }
-
-        set
-        {
-            mCritChance = value;
-        }
-    }
-
-    public int Defense
-    {
-        get
-        {
-            return mDefense;
-        }
-
-        set
-        {
-            mDefense = value;
-        }
-    }
-
-    public int Attack
-    {
-        get
-        {
-            return mAttack;
-        }
-
-        set
-        {
-            mAttack = value;
-        }
-    }
+{    
+    public float AttackSpeed;    
+    public float CritChance;    
+    public int Defense;    
+    public int Attack;
 
     void OnEnable()
     {
