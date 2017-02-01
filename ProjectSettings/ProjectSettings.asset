@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  productGUID: 8189cec9e49e5944d91928c8c90a950c
+  productGUID: 85a8e202ca4ffba4f99b6b14d4b5b0d8
   AndroidProfiler: 0
   defaultScreenOrientation: 4
   targetDevice: 2
@@ -452,9 +452,8 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled:
-    UNet: 1
-  cloudProjectId: 03310991-9b3b-4955-8d3c-2f299b78e474
-  projectName: Unity-Tools
-  organizationId: lfsmwilliamson
+  cloudServicesEnabled: {}
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
   cloudEnabled: 0

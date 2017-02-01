@@ -14,8 +14,7 @@ public class PlayerController : MonoBehaviour
         
     }
     void Start()
-    {
-        
+    {        
         blackboard = GetComponentInChildren<Blackboard>();
     }
 

@@ -2570,23 +2570,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 1589228177}
   m_Parent: {fileID: 0}
-  m_StateName: 4265686176696f757254726565
+  m_StateName: BehaviourTree
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 48170
-  m_Description: 4164647320616e206578706c6f74696f6e20666f726365206f6e206d6f75736520636c69636b2e
+  m_CachedInstanceID: 19292
+  m_Description: Adds an explotion force on mouse click.
   m_IgnoreTimeScale: 0
   m_ResetStatusOnDisable: 1
   m_EnabledStates: []
   m_NodeSerialization:
     m_NodeTypes:
-    - 4265686176696f75724d616368696e652e557064617465
-    - 4265686176696f75724d616368696e652e5072696f7269747953657175656e6365
-    - 4265686176696f75724d616368696e652e49734d6f757365427574746f6e446f776e
-    - 4265686176696f75724d616368696e652e49734d6f7573654f766572416e79436f6c6c69646572
-    - 4265686176696f75724d616368696e652e4578706c6f73696f6e466f726365
+    - BehaviourMachine.Update
+    - BehaviourMachine.PrioritySequence
+    - BehaviourMachine.IsMouseButtonDown
+    - BehaviourMachine.IsMouseOverAnyCollider
+    - BehaviourMachine.ExplosionForce
     m_NodeTypeHash: 89ef8210fbd4a94470faf742de8b886f851f29ca
     m_NodeFieldStartIndex: 00000000030000000500000009000000110000001c000000
     m_BranchIndex: ffffffff00000000010000000100000001000000
@@ -2597,54 +2597,54 @@ MonoBehaviour:
     - 100
     - 100
     m_StringValue:
-    - 557064617465
-    - 5072696f7269747953657175656e6365
-    - 49734d6f757365427574746f6e446f776e
-    - 4265686176696f75724d616368696e652e46736d4576656e74
-    - 49734d6f7573654f766572416e79436f6c6c69646572
-    - 4265686176696f75724d616368696e652e46736d4576656e74
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
-    - 4578706c6f73696f6e466f726365
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
+    - Update
+    - PrioritySequence
+    - IsMouseButtonDown
+    - BehaviourMachine.FsmEvent
+    - IsMouseOverAnyCollider
+    - BehaviourMachine.FsmEvent
+    - BehaviourMachine.ConcreteGameObjectVar
+    - ExplosionForce
+    - BehaviourMachine.ConcreteGameObjectVar
+    - BehaviourMachine.ConcreteFloatVar
     m_CurveValue: []
     m_GenericFieldType:
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
     m_GenericFieldHash: 264ce8ef264ce8ef264ce8ef
     m_GenericFieldSize: 010000000100000001000000
     m_FieldIndex: 00000000000000000100000002000000010000000300000002000000030000000400000005000000040000000500000000000000000000000600000006000000070000000800000007000000090000000800000001000000010000000200000002000000090000000a0000000b000000
     m_FieldType: 01000000020000000500000001000000020000000100000002000000110000000400000001000000020000001100000010000000030000000c0000001100000016000000010000000200000016000000110000001000000003000000100000000300000011000000040000000c000000
     m_FieldPath:
-    - 696e7374616e63654944
-    - 6e616d65
-    - 656e61626c6564
-    - 696e7374616e63654944
-    - 6e616d65
-    - 696e7374616e63654944
-    - 6e616d65
-    - 6f6e53756363657373
-    - 6d6f757365427574746f6e
-    - 696e7374616e63654944
-    - 6e616d65
-    - 6f6e53756363657373
-    - 64697374616e6365
-    - 64697374616e63652e76616c7565
-    - 6c617965724d61736b
-    - 73746f726547616d654f626a656374
-    - 73746f7265506f696e74
-    - 696e7374616e63654944
-    - 6e616d65
-    - 6578706c6f73696f6e506f696e74
-    - 6578706c6f73696f6e506f736974696f6e
-    - 6578706c6f73696f6e466f726365
-    - 6578706c6f73696f6e466f7263652e76616c7565
-    - 6578706c6f73696f6e526164697573
-    - 6578706c6f73696f6e5261646975732e76616c7565
-    - 757077617264734d6f646966696572
-    - 6d6f6465
-    - 6c6179657273
+    - instanceID
+    - name
+    - enabled
+    - instanceID
+    - name
+    - instanceID
+    - name
+    - onSuccess
+    - mouseButton
+    - instanceID
+    - name
+    - onSuccess
+    - distance
+    - distance.value
+    - layerMask
+    - storeGameObject
+    - storePoint
+    - instanceID
+    - name
+    - explosionPoint
+    - explosionPosition
+    - explosionForce
+    - explosionForce.value
+    - explosionRadius
+    - explosionRadius.value
+    - upwardsModifier
+    - mode
+    - layers
 --- !u!114 &1589228177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2662,7 +2662,7 @@ MonoBehaviour:
   m_StringVars: []
   m_Vector3Vars:
   - m_ID: 1817877200
-    m_Name: 506f696e74324578706c6f6465
+    m_Name: Point2Explode
     m_Blackboard: {fileID: 1589228177}
     m_IsConstant: 0
     value: {x: 0, y: 0, z: 0}
@@ -2673,6 +2673,7 @@ MonoBehaviour:
   m_TextureVars: []
   m_MaterialVars: []
   m_ObjectVars: []
+  m_DynamicLists: []
   m_FsmEvents: []
   m_ConcreteFsmEvents: []
   m_Namespace: 
@@ -3461,20 +3462,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 1972008377}
   m_Parent: {fileID: 0}
-  m_StateName: 4265686176696f757254726565
+  m_StateName: BehaviourTree
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 48268
+  m_CachedInstanceID: 19390
   m_Description: 
   m_IgnoreTimeScale: 0
   m_ResetStatusOnDisable: 1
   m_EnabledStates: []
   m_NodeSerialization:
     m_NodeTypes:
-    - 4265686176696f75724d616368696e652e4f6e475549
-    - 4265686176696f75724d616368696e652e426f78
+    - BehaviourMachine.OnGUI
+    - BehaviourMachine.Box
     m_NodeTypeHash: 0548002e230c3286
     m_NodeFieldStartIndex: 00000000050000000c000000
     m_BranchIndex: ffffffff00000000
@@ -3482,34 +3483,34 @@ MonoBehaviour:
     m_IntValue: 010000000100000002000000
     m_FloatValue: []
     m_StringValue:
-    - 4f6e475549
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 426f78
-    - 4265686176696f75724d616368696e652e436f6e637265746554657874757265566172
-    - 436c69636b206f6e2074686520677265656e2077616c6c21
-    - 4265686176696f75724d616368696e652e436f6e6372657465537472696e67566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465537472696e67566172
+    - OnGUI
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - Box
+    - BehaviourMachine.ConcreteTextureVar
+    - Click on the green wall!
+    - BehaviourMachine.ConcreteStringVar
+    - BehaviourMachine.ConcreteStringVar
     m_CurveValue: []
     m_GenericFieldType:
-    - 4265686176696f75724d616368696e652e436f6e6372657465537472696e67566172
+    - BehaviourMachine.ConcreteStringVar
     m_GenericFieldHash: 7de9e602
     m_GenericFieldSize: 01000000
     m_FieldIndex: 000000000000000001000000010000000200000002000000030000000400000000000000050000000600000007000000
     m_FieldType: 010000000200000005000000110000001100000001000000020000001100000010000000020000001100000011000000
     m_FieldPath:
-    - 696e7374616e63654944
-    - 6e616d65
-    - 656e61626c6564
-    - 64656661756c745769647468
-    - 64656661756c74486569676874
-    - 696e7374616e63654944
-    - 6e616d65
-    - 74657874757265
-    - 74657874
-    - 746578742e76616c7565
-    - 746f6f6c746970
-    - 6775695374796c65
+    - instanceID
+    - name
+    - enabled
+    - defaultWidth
+    - defaultHeight
+    - instanceID
+    - name
+    - texture
+    - text
+    - text.value
+    - tooltip
+    - guiStyle
 --- !u!114 &1972008377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3533,6 +3534,7 @@ MonoBehaviour:
   m_TextureVars: []
   m_MaterialVars: []
   m_ObjectVars: []
+  m_DynamicLists: []
   m_FsmEvents: []
   m_ConcreteFsmEvents: []
   m_Namespace: 

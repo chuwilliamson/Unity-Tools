@@ -200,13 +200,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 85309808}
   m_Parent: {fileID: 0}
-  m_StateName: 4d6f76652043616d657261
+  m_StateName: Move Camera
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 22342
-  m_Description: 49662074686520506c6179657220656e74657273206f6e207468652074726967676572207468656e207468652063616d657261206d6f7665732075702e
+  m_CachedInstanceID: 18720
+  m_Description: If the Player enters on the trigger then the camera moves up.
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
   m_StartState: {fileID: 85309813}
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FloatVars:
   - m_ID: 374077797
-    m_Name: 506c617965722044697374616e6365
+    m_Name: Player Distance
     m_Blackboard: {fileID: 85309808}
     m_IsConstant: 0
     value: 0
@@ -240,8 +240,10 @@ MonoBehaviour:
   m_TextureVars: []
   m_MaterialVars: []
   m_ObjectVars: []
+  m_DynamicLists: []
   m_FsmEvents: []
   m_ConcreteFsmEvents: []
+  m_Namespace: 
 --- !u!114 &85309810
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -255,23 +257,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 85309808}
   m_Parent: {fileID: 85309807}
-  m_StateName: 4d6f7665205570
+  m_StateName: Move Up
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 240, y: 40}
   m_Transitions:
   - m_Destination: {fileID: 85309813}
     m_EventID: -19
-  m_CachedInstanceID: 22346
-  m_Description: 4d6f766573207468652063616d657261207573696e6720746865206469666572656e6365206265747765656e207468652063616d65726120616e642074686520706c6179657220706f736974696f6e20696e20746865207920617869732e
+  m_CachedInstanceID: 18724
+  m_Description: Moves the camera using the diference between the camera and the player
+    position in the y axis.
   m_IgnoreTimeScale: 0
   m_ResetStatusOnDisable: 1
   m_EnabledStates: []
   m_NodeSerialization:
     m_NodeTypes:
-    - 4265686176696f75724d616368696e652e4c617465557064617465
-    - 4265686176696f75724d616368696e652e47657444697374616e6365
-    - 4265686176696f75724d616368696e652e5472616e736c617465
+    - BehaviourMachine.LateUpdate
+    - BehaviourMachine.GetDistance
+    - BehaviourMachine.Translate
     m_NodeTypeHash: 89ef8210a5fffed13a2a045b
     m_NodeFieldStartIndex: 00000000030000000d00000016000000
     m_BranchIndex: ffffffff0000000000000000
@@ -280,47 +283,47 @@ MonoBehaviour:
     m_IntValue: 04000000010000000300000065f94b16000000000100000065f94b160100000001000000
     m_FloatValue: []
     m_StringValue:
-    - 4c617465557064617465
-    - 47657444697374616e6365
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465566563746f7233566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 5472616e736c617465
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465566563746f7233566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
+    - LateUpdate
+    - GetDistance
+    - BehaviourMachine.ConcreteGameObjectVar
+    - BehaviourMachine.ConcreteVector3Var
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - Translate
+    - BehaviourMachine.ConcreteGameObjectVar
+    - BehaviourMachine.ConcreteVector3Var
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
     m_CurveValue: []
     m_GenericFieldType:
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
+    - BehaviourMachine.ConcreteGameObjectVar
     m_GenericFieldHash: e5faf787
     m_GenericFieldSize: 01000000
     m_FieldIndex: 000000000000000001000000020000000100000000000000000000000200000003000000040000000300000005000000040000000500000006000000070000000800000009000000060000000a0000000700000008000000
     m_FieldType: 0100000002000000050000000100000002000000100000000f000000110000001100000011000000120000001100000004000000010000000200000011000000110000001100000012000000110000000400000005000000
     m_FieldPath:
-    - 696e7374616e63654944
-    - 6e616d65
-    - 656e61626c6564
-    - 696e7374616e63654944
-    - 6e616d65
-    - 67616d654f626a65637431
-    - 67616d654f626a656374312e76616c7565
-    - 67616d654f626a65637432
-    - 73746f726544697374616e6365
-    - 73746f726558
-    - 73746f726559
-    - 73746f72655a
-    - 72656c6174697665546f
-    - 696e7374616e63654944
-    - 6e616d65
-    - 67616d654f626a656374
-    - 7472616e736c6174696f6e
-    - 78
-    - 79
-    - 7a
-    - 72656c6174697665546f
-    - 7065725365636f6e64
+    - instanceID
+    - name
+    - enabled
+    - instanceID
+    - name
+    - gameObject1
+    - gameObject1.value
+    - gameObject2
+    - storeDistance
+    - storeX
+    - storeY
+    - storeZ
+    - relativeTo
+    - instanceID
+    - name
+    - gameObject
+    - translation
+    - x
+    - y
+    - z
+    - relativeTo
+    - perSecond
 --- !u!65 &85309811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -426,37 +429,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 85309808}
   m_Parent: {fileID: 85309807}
-  m_StateName: 506c6179657220446561643f
+  m_StateName: Player Dead?
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 40, y: 40}
   m_Transitions:
   - m_Destination: {fileID: 85309810}
     m_EventID: -17
-  m_CachedInstanceID: 22352
-  m_Description: 436865636b2069662074686520706c6179657220697320646561643b20696620736f2c2072657374617274207468652067616d652e
+  m_CachedInstanceID: 18730
+  m_Description: Check if the player is dead; if so, restart the game.
   m_IgnoreTimeScale: 0
   m_ResetStatusOnDisable: 1
   m_EnabledStates: []
   m_NodeSerialization:
     m_NodeTypes:
-    - 4265686176696f75724d616368696e652e557064617465
-    - 4265686176696f75724d616368696e652e47657444697374616e6365
-    - 4265686176696f75724d616368696e652e53657175656e6365
-    - 4265686176696f75724d616368696e652e4973466c6f61744c657373
-    - 4265686176696f75724d616368696e652e417564696f506c61794f6e6553686f74
-    - 4265686176696f75724d616368696e652e53657454696d655363616c65
-    - 4265686176696f75724d616368696e652e49676e6f726554696d655363616c65
-    - 4265686176696f75724d616368696e652e57616974
-    - 4265686176696f75724d616368696e652e53657454696d655363616c65
-    - 4265686176696f75724d616368696e652e52656c6f61644c6576656c
-    m_NodeTypeHash: 89ef8210a5fffed1fbd4a94446d570adc7add48179e713e6f98727072564a7ab79e713e69e483e35
-    m_NodeFieldStartIndex: 00000000030000000d0000000f000000150000001d00000021000000240000002b0000002f00000032000000
+    - BehaviourMachine.Update
+    - BehaviourMachine.GetDistance
+    - BehaviourMachine.Sequence
+    - BehaviourMachine.IsFloatLess
+    - BehaviourMachine.AudioPlayOneShot
+    - BehaviourMachine.SetTimeScale
+    - BehaviourMachine.IgnoreTimeScale
+    - BehaviourMachine.Wait
+    - BehaviourMachine.SetTimeScale
+    - BehaviourMachine.ReloadLevel
+    m_NodeTypeHash: 89ef8210a5fffed1fbd4a94446d570adc7add48179e713e6f9872707ce7847da79e713e69e483e35
+    m_NodeFieldStartIndex: 00000000030000000d0000000f000000150000001d00000021000000240000002a0000002e00000031000000
     m_BranchIndex: ffffffff000000000000000002000000020000000200000002000000060000000200000002000000
     m_UnityObjectValue:
     - {fileID: 540630919}
     - {fileID: 8300000, guid: c9d2373e7981d417d9861d8615bad135, type: 3}
-    m_IntValue: 02000000010000000100000065f94b1600000000030000000400000065f94b16050000000600000007000000080000000400000001000000090000000a00000000000000
+    m_IntValue: 02000000010000000100000065f94b1600000000030000000400000065f94b160500000006000000070000000800000001000000090000000a00000000000000
     m_FloatValue:
     - -5
     - 1
@@ -464,89 +467,88 @@ MonoBehaviour:
     - 0.5
     - 1
     m_StringValue:
-    - 557064617465
-    - 47657444697374616e6365
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465566563746f7233566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 48617320446965643f
-    - 4973466c6f61744c657373
-    - 4265686176696f75724d616368696e652e46736d4576656e74
-    - 417564696f506c61794f6e6553686f74
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
+    - Update
+    - GetDistance
+    - BehaviourMachine.ConcreteGameObjectVar
+    - BehaviourMachine.ConcreteVector3Var
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - Has Died?
+    - IsFloatLess
+    - BehaviourMachine.FsmEvent
+    - AudioPlayOneShot
+    - BehaviourMachine.ConcreteGameObjectVar
     - 
-    - 537461727420536c6f77204d6f74696f6e
-    - 49676e6f726554696d655363616c65
-    - 4265686176696f75724d616368696e652e436f6e6372657465426f6f6c566172
-    - 57616974
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 53746f707320536c6f77204d6f74696f6e
-    - 52656c6f61644c6576656c
+    - Start Slow Motion
+    - IgnoreTimeScale
+    - BehaviourMachine.ConcreteBoolVar
+    - Wait
+    - BehaviourMachine.ConcreteFloatVar
+    - Stops Slow Motion
+    - ReloadLevel
     m_CurveValue: []
     m_GenericFieldType:
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e63726574654f626a656374566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
+    - BehaviourMachine.ConcreteGameObjectVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteObjectVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
     m_GenericFieldHash: e5faf787264ce8eff4dc0c6b264ce8ef264ce8ef264ce8ef264ce8ef
     m_GenericFieldSize: 01000000010000000200000001000000010000000100000001000000
-    m_FieldIndex: 00000000000000000100000002000000010000000000000000000000020000000300000004000000030000000500000004000000050000000600000006000000070000000800000007000000010000000000000008000000090000000a00000002000000010000000b0000000300000001000000090000000c00000004000000020000000a0000000d0000000e0000000b0000000f0000000500000003000000100000000c0000000d0000000e0000001100000006000000040000000f0000001200000010000000
-    m_FieldType: 0100000002000000050000000100000002000000100000000f0000001100000011000000110000001200000011000000040000000100000002000000010000000200000011000000120000001000000003000000010000000200000011000000100000000f000000020000001000000003000000010000000200000010000000030000000100000002000000110000000100000002000000100000000300000011000000040000000400000001000000020000001000000003000000010000000200000004000000
+    m_FieldIndex: 00000000000000000100000002000000010000000000000000000000020000000300000004000000030000000500000004000000050000000600000006000000070000000800000007000000010000000000000008000000090000000a00000002000000010000000b0000000300000001000000090000000c00000004000000020000000a0000000d0000000e0000000b0000000f0000000500000003000000100000000c0000000d0000001100000006000000040000000e000000120000000f000000
+    m_FieldType: 0100000002000000050000000100000002000000100000000f0000001100000011000000110000001200000011000000040000000100000002000000010000000200000011000000120000001000000003000000010000000200000011000000100000000f0000000200000010000000030000000100000002000000100000000300000001000000020000001100000001000000020000001000000003000000110000000400000001000000020000001000000003000000010000000200000004000000
     m_FieldPath:
-    - 696e7374616e63654944
-    - 6e616d65
-    - 656e61626c6564
-    - 696e7374616e63654944
-    - 6e616d65
-    - 67616d654f626a65637431
-    - 67616d654f626a656374312e76616c7565
-    - 67616d654f626a65637432
-    - 73746f726544697374616e6365
-    - 73746f726558
-    - 73746f726559
-    - 73746f72655a
-    - 72656c6174697665546f
-    - 696e7374616e63654944
-    - 6e616d65
-    - 696e7374616e63654944
-    - 6e616d65
-    - 6f6e53756363657373
-    - 61
-    - 62
-    - 622e76616c7565
-    - 696e7374616e63654944
-    - 6e616d65
-    - 67616d654f626a656374
-    - 617564696f436c6970
-    - 617564696f436c69702e76616c7565
-    - 617564696f436c69702e6f626a65637454797065
-    - 766f6c756d655363616c65
-    - 766f6c756d655363616c652e76616c7565
-    - 696e7374616e63654944
-    - 6e616d65
-    - 6e657754696d655363616c65
-    - 6e657754696d655363616c652e76616c7565
-    - 696e7374616e63654944
-    - 6e616d65
-    - 69676e6f7265
-    - 696e7374616e63654944
-    - 6e616d65
-    - 696e74657276616c54696d65
-    - 696e74657276616c54696d652e76616c7565
-    - 73746f726543757272656e7454696d65
-    - 77616974696e67537461747573
-    - 66696e6973686564537461747573
-    - 696e7374616e63654944
-    - 6e616d65
-    - 6e657754696d655363616c65
-    - 6e657754696d655363616c652e76616c7565
-    - 696e7374616e63654944
-    - 6e616d65
-    - 6c6f61644c6576656c54797065
+    - instanceID
+    - name
+    - enabled
+    - instanceID
+    - name
+    - gameObject1
+    - gameObject1.value
+    - gameObject2
+    - storeDistance
+    - storeX
+    - storeY
+    - storeZ
+    - relativeTo
+    - instanceID
+    - name
+    - instanceID
+    - name
+    - onSuccess
+    - a
+    - b
+    - b.value
+    - instanceID
+    - name
+    - gameObject
+    - audioClip
+    - audioClip.value
+    - audioClip.objectType
+    - volumeScale
+    - volumeScale.value
+    - instanceID
+    - name
+    - newTimeScale
+    - newTimeScale.value
+    - instanceID
+    - name
+    - ignore
+    - instanceID
+    - name
+    - intervalTime
+    - intervalTime.value
+    - storeCurrentTime
+    - finishedStatus
+    - instanceID
+    - name
+    - newTimeScale
+    - newTimeScale.value
+    - instanceID
+    - name
+    - loadLevelType
 --- !u!1 &87932992
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,25 +814,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 540630925}
   m_Parent: {fileID: 0}
-  m_StateName: 436f6e74726f6c6c6572
+  m_StateName: Controller
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 22384
-  m_Description: 4120706c6179657220636f6e74726f6c6c6572207468617420697320616c77617973206a756d70696e6721
+  m_CachedInstanceID: 18762
+  m_Description: A player controller that is always jumping!
   m_IgnoreTimeScale: 0
   m_ResetStatusOnDisable: 1
   m_EnabledStates: []
   m_NodeSerialization:
     m_NodeTypes:
-    - 4265686176696f75724d616368696e652e557064617465
-    - 4265686176696f75724d616368696e652e53657175656e6365
-    - 4265686176696f75724d616368696e652e497347726f756e646564
-    - 4265686176696f75724d616368696e652e417564696f506c6179
-    - 4265686176696f75724d616368696e652e426f6f6c536574
-    - 4265686176696f75724d616368696e652e4765744178697332
-    - 4265686176696f75724d616368696e652e4d6f7665
+    - BehaviourMachine.Update
+    - BehaviourMachine.Sequence
+    - BehaviourMachine.IsGrounded
+    - BehaviourMachine.AudioPlay
+    - BehaviourMachine.BoolSet
+    - BehaviourMachine.GetAxis2
+    - BehaviourMachine.Move
     m_NodeTypeHash: 89ef8210fbd4a94471d4c489de52ceaabb8eb60c21771d0eacbbda70
     m_NodeFieldStartIndex: 000000000300000005000000090000000d000000120000001a00000026000000
     m_BranchIndex: ffffffff000000000100000001000000010000000000000000000000
@@ -841,70 +843,70 @@ MonoBehaviour:
     - 1
     - 10
     m_StringValue:
-    - 557064617465
-    - 486974207468652047726f756e643f
-    - 497347726f756e646564
-    - 4265686176696f75724d616368696e652e46736d4576656e74
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
-    - 417564696f506c6179
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 426f6f6c536574
-    - 4765744178697332
-    - 486f72697a6f6e74616c
-    - 4d6f7665
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
+    - Update
+    - Hit the Ground?
+    - IsGrounded
+    - BehaviourMachine.FsmEvent
+    - BehaviourMachine.ConcreteGameObjectVar
+    - AudioPlay
+    - BehaviourMachine.ConcreteGameObjectVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BoolSet
+    - GetAxis2
+    - Horizontal
+    - Move
+    - BehaviourMachine.ConcreteGameObjectVar
     m_CurveValue: []
     m_GenericFieldType:
-    - 4265686176696f75724d616368696e652e436f6e6372657465426f6f6c566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465537472696e67566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465426f6f6c566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
+    - BehaviourMachine.ConcreteBoolVar
+    - BehaviourMachine.ConcreteStringVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteBoolVar
+    - BehaviourMachine.ConcreteFloatVar
     m_GenericFieldHash: e4b98a667de9e602264ce8ef264ce8efe4b98a66264ce8ef
     m_GenericFieldSize: 010000000100000001000000010000000100000001000000
     m_FieldIndex: 0000000000000000010000000200000001000000030000000200000003000000040000000400000005000000060000000700000005000000080000000600000000000000070000000800000009000000010000000a000000090000000a00000002000000000000000b0000000b0000000c0000000c0000000d0000000300000001000000040000000e0000000f0000000500000002000000
     m_FieldType: 0100000002000000050000000100000002000000010000000200000011000000110000000100000002000000110000001100000001000000020000001400000010000000050000000100000002000000100000000200000004000000160000001000000003000000010000000200000011000000040000001600000010000000030000001000000005000000140000001000000003000000
     m_FieldPath:
-    - 696e7374616e63654944
-    - 6e616d65
-    - 656e61626c6564
-    - 696e7374616e63654944
-    - 6e616d65
-    - 696e7374616e63654944
-    - 6e616d65
-    - 6f6e53756363657373
-    - 67616d654f626a656374
-    - 696e7374616e63654944
-    - 6e616d65
-    - 67616d654f626a656374
-    - 64656c6179
-    - 696e7374616e63654944
-    - 6e616d65
-    - 7661726961626c65
-    - 6e657756616c7565
-    - 6e657756616c75652e76616c7565
-    - 696e7374616e63654944
-    - 6e616d65
-    - 617869734e616d65
-    - 617869734e616d652e76616c7565
-    - 73746f726541786973436f6d706f6e656e74
-    - 73746f726541786973
-    - 6d756c7469706c696572
-    - 6d756c7469706c6965722e76616c7565
-    - 696e7374616e63654944
-    - 6e616d65
-    - 67616d654f626a656374
-    - 7370616365
-    - 646972656374696f6e
-    - 7370656564
-    - 73706565642e76616c7565
-    - 75736547726176697479
-    - 757365477261766974792e76616c7565
-    - 6a756d70
-    - 6a756d705370656564
-    - 6a756d7053706565642e76616c7565
+    - instanceID
+    - name
+    - enabled
+    - instanceID
+    - name
+    - instanceID
+    - name
+    - onSuccess
+    - gameObject
+    - instanceID
+    - name
+    - gameObject
+    - delay
+    - instanceID
+    - name
+    - variable
+    - newValue
+    - newValue.value
+    - instanceID
+    - name
+    - axisName
+    - axisName.value
+    - storeAxisComponent
+    - storeAxis
+    - multiplier
+    - multiplier.value
+    - instanceID
+    - name
+    - gameObject
+    - space
+    - direction
+    - speed
+    - speed.value
+    - useGravity
+    - useGravity.value
+    - jump
+    - jumpSpeed
+    - jumpSpeed.value
 --- !u!114 &540630925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,14 +922,14 @@ MonoBehaviour:
   m_IntVars: []
   m_BoolVars:
   - m_ID: 473814717
-    m_Name: 49732047726f756e646564
+    m_Name: Is Grounded
     m_Blackboard: {fileID: 540630925}
     m_IsConstant: 0
     value: 0
   m_StringVars: []
   m_Vector3Vars:
   - m_ID: 197454018
-    m_Name: 41786973
+    m_Name: Axis
     m_Blackboard: {fileID: 540630925}
     m_IsConstant: 0
     value: {x: 0, y: 0, z: 0}
@@ -938,8 +940,10 @@ MonoBehaviour:
   m_TextureVars: []
   m_MaterialVars: []
   m_ObjectVars: []
+  m_DynamicLists: []
   m_FsmEvents: []
   m_ConcreteFsmEvents: []
+  m_Namespace: 
 --- !u!54 &540630926
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1567,13 +1571,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 1690205509}
   m_Parent: {fileID: 0}
-  m_StateName: 53746174654d616368696e65
+  m_StateName: StateMachine
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 22454
-  m_Description: 5768656e207468652063616d6572612069732061626f76652074686520224e657874205922207661726961626c652061206e657720706c6174666f726d20697320737061776e65642e
+  m_CachedInstanceID: 18832
+  m_Description: When the camera is above the "Next Y" variable a new platform is
+    spawned.
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
   m_StartState: {fileID: 1690205510}
@@ -1592,12 +1597,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FloatVars:
   - m_ID: 1822674883
-    m_Name: 506f732059
+    m_Name: Pos Y
     m_Blackboard: {fileID: 1690205509}
     m_IsConstant: 0
     value: 0
   - m_ID: 1081027683
-    m_Name: 4e6578742059
+    m_Name: Next Y
     m_Blackboard: {fileID: 1690205509}
     m_IsConstant: 0
     value: 5
@@ -1610,15 +1615,17 @@ MonoBehaviour:
   m_QuaternionVars: []
   m_GameObjectVars:
   - m_ID: 993995850
-    m_Name: 4e657720506c6174666f726d
+    m_Name: New Platform
     m_Blackboard: {fileID: 1690205509}
     m_IsConstant: 0
     value: {fileID: 0}
   m_TextureVars: []
   m_MaterialVars: []
   m_ObjectVars: []
+  m_DynamicLists: []
   m_FsmEvents: []
   m_ConcreteFsmEvents: []
+  m_Namespace: 
 --- !u!114 &1690205510
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1632,23 +1639,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 1690205509}
   m_Parent: {fileID: 1690205508}
-  m_StateName: 506f732059203e204e6578742059203f
+  m_StateName: Pos Y > Next Y ?
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 30, y: 30}
   m_Transitions:
   - m_Destination: {fileID: 1690205511}
     m_EventID: -10
-  m_CachedInstanceID: 22458
-  m_Description: 436865636b20696620746865207661726961626c652022506f732059222069732067726561746572207468616e20224e6578742059222e
+  m_CachedInstanceID: 18836
+  m_Description: Check if the variable "Pos Y" is greater than "Next Y".
   m_IgnoreTimeScale: 0
   m_ResetStatusOnDisable: 1
   m_EnabledStates: []
   m_NodeSerialization:
     m_NodeTypes:
-    - 4265686176696f75724d616368696e652e557064617465
-    - 4265686176696f75724d616368696e652e476574506f736974696f6e
-    - 4265686176696f75724d616368696e652e4973466c6f617447726561746572
+    - BehaviourMachine.Update
+    - BehaviourMachine.GetPosition
+    - BehaviourMachine.IsFloatGreater
     m_NodeTypeHash: 89ef82106aae7af346d570ad
     m_NodeFieldStartIndex: 00000000030000000b00000010000000
     m_BranchIndex: ffffffff0000000000000000
@@ -1656,13 +1663,13 @@ MonoBehaviour:
     m_IntValue: 020000000100000003000000c3cfa36c0000000001000000f6ffffffc3cfa36c632c6f40
     m_FloatValue: []
     m_StringValue:
-    - 557064617465
-    - 476574506f736974696f6e
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465566563746f7233566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4973466c6f617447726561746572
+    - Update
+    - GetPosition
+    - BehaviourMachine.ConcreteGameObjectVar
+    - BehaviourMachine.ConcreteVector3Var
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - IsFloatGreater
     m_CurveValue: []
     m_GenericFieldType: []
     m_GenericFieldHash: 
@@ -1670,22 +1677,22 @@ MonoBehaviour:
     m_FieldIndex: 00000000000000000100000002000000010000000200000003000000040000000300000005000000040000000500000006000000060000000700000008000000
     m_FieldType: 010000000200000005000000010000000200000011000000110000001100000012000000110000000400000001000000020000001e0000001200000012000000
     m_FieldPath:
-    - 696e7374616e63654944
-    - 6e616d65
-    - 656e61626c6564
-    - 696e7374616e63654944
-    - 6e616d65
-    - 67616d654f626a656374
-    - 73746f7265506f736974696f6e
-    - 73746f726558
-    - 73746f726559
-    - 73746f72655a
-    - 72656c6174697665546f
-    - 696e7374616e63654944
-    - 6e616d65
-    - 6f6e53756363657373
-    - 61
-    - 62
+    - instanceID
+    - name
+    - enabled
+    - instanceID
+    - name
+    - gameObject
+    - storePosition
+    - storeX
+    - storeY
+    - storeZ
+    - relativeTo
+    - instanceID
+    - name
+    - onSuccess
+    - a
+    - b
 --- !u!114 &1690205511
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1699,25 +1706,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 1690205509}
   m_Parent: {fileID: 1690205508}
-  m_StateName: 537061776e20506c6174666f726d
+  m_StateName: Spawn Platform
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 240, y: 30}
   m_Transitions:
   - m_Destination: {fileID: 1690205510}
     m_EventID: -10
-  m_CachedInstanceID: 22460
-  m_Description: 496e7374616e74696174652061206e657720706c6174666f726d20696e20612072616e646f6d20706f736974696f6e2e
+  m_CachedInstanceID: 18838
+  m_Description: Instantiate a new platform in a random position.
   m_IgnoreTimeScale: 0
   m_ResetStatusOnDisable: 1
   m_EnabledStates: []
   m_NodeSerialization:
     m_NodeTypes:
-    - 4265686176696f75724d616368696e652e4f6e456e61626c65
-    - 4265686176696f75724d616368696e652e496e7374616e7469617465
-    - 4265686176696f75724d616368696e652e52616e646f6d506f736974696f6e58595a
-    - 4265686176696f75724d616368696e652e466c6f6174416464
-    - 4265686176696f75724d616368696e652e53656e644576656e74
+    - BehaviourMachine.OnEnable
+    - BehaviourMachine.Instantiate
+    - BehaviourMachine.RandomPositionXYZ
+    - BehaviourMachine.FloatAdd
+    - BehaviourMachine.SendEvent
     m_NodeTypeHash: 89ef821085b343ed72ba0db78d24a0b40ee2ebc6
     m_NodeFieldStartIndex: 00000000030000000a000000180000001e00000024000000
     m_BranchIndex: ffffffff00000000000000000000000000000000
@@ -1731,62 +1738,62 @@ MonoBehaviour:
     - 0
     - 3
     m_StringValue:
-    - 4f6e456e61626c65
-    - 496e7374616e7469617465
-    - 4265686176696f75724d616368696e652e436f6e6372657465566563746f7233566172
-    - 4265686176696f75724d616368696e652e436f6e63726574655175617465726e696f6e566172
-    - 52616e646f6d506f736974696f6e58595a
-    - 466c6f6174416464
-    - 53656e644576656e74
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465426f6f6c566172
+    - OnEnable
+    - Instantiate
+    - BehaviourMachine.ConcreteVector3Var
+    - BehaviourMachine.ConcreteQuaternionVar
+    - RandomPositionXYZ
+    - FloatAdd
+    - SendEvent
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteBoolVar
     m_CurveValue: []
     m_GenericFieldType:
-    - 4265686176696f75724d616368696e652e436f6e637265746547616d654f626a656374566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
-    - 4265686176696f75724d616368696e652e436f6e6372657465466c6f6174566172
+    - BehaviourMachine.ConcreteGameObjectVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
+    - BehaviourMachine.ConcreteFloatVar
     m_GenericFieldHash: e5faf787264ce8ef264ce8ef264ce8ef264ce8ef264ce8ef
     m_GenericFieldSize: 010000000100000001000000010000000100000001000000
     m_FieldIndex: 00000000000000000100000002000000010000000000000000000000020000000300000003000000040000000400000005000000010000000000000002000000010000000600000007000000030000000200000004000000030000000800000009000000050000000a00000005000000040000000b0000000c000000060000000d000000070000000800000009000000
     m_FieldType: 0100000002000000050000000100000002000000100000000f00000011000000110000001a00000001000000020000001a000000100000000300000010000000030000001200000012000000100000000300000010000000030000000400000001000000020000001200000010000000030000000500000001000000020000001e000000110000001100000011000000
     m_FieldPath:
-    - 696e7374616e63654944
-    - 6e616d65
-    - 656e61626c6564
-    - 696e7374616e63654944
-    - 6e616d65
-    - 6f726967696e616c
-    - 6f726967696e616c2e76616c7565
-    - 706f736974696f6e
-    - 726f746174696f6e
-    - 73746f7265436c6f6e65
-    - 696e7374616e63654944
-    - 6e616d65
-    - 67616d654f626a656374
-    - 6d696e58
-    - 6d696e582e76616c7565
-    - 6d617858
-    - 6d6178582e76616c7565
-    - 6d696e59
-    - 6d617859
-    - 6d696e5a
-    - 6d696e5a2e76616c7565
-    - 6d61785a
-    - 6d61785a2e76616c7565
-    - 72656c6174697665546f
-    - 696e7374616e63654944
-    - 6e616d65
-    - 7661726961626c65
-    - 6164644279
-    - 61646442792e76616c7565
-    - 7065725365636f6e64
-    - 696e7374616e63654944
-    - 6e616d65
-    - 6576656e74546f53656e64
-    - 64656c6179
-    - 73746f726544656c617954696d65
-    - 73746f72654576656e7455736564
+    - instanceID
+    - name
+    - enabled
+    - instanceID
+    - name
+    - original
+    - original.value
+    - position
+    - rotation
+    - storeClone
+    - instanceID
+    - name
+    - gameObject
+    - minX
+    - minX.value
+    - maxX
+    - maxX.value
+    - minY
+    - maxY
+    - minZ
+    - minZ.value
+    - maxZ
+    - maxZ.value
+    - relativeTo
+    - instanceID
+    - name
+    - variable
+    - addBy
+    - addBy.value
+    - perSecond
+    - instanceID
+    - name
+    - eventToSend
+    - delay
+    - storeDelayTime
+    - storeEventUsed
