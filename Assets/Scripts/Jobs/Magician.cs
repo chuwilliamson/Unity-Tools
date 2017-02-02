@@ -4,66 +4,10 @@ using UnityEngine;
 using BehaviourMachine;
 public class Magician : StateBehaviour, IStats
 {
-    [SerializeField]
-    float mAttackSpeed;
-    [SerializeField]
-    float mCritChance;
-    [SerializeField]
-    int mDefense;
-    [SerializeField]
-    int mAttack;
-
-    public float AttackSpeed
-    {
-        get
-        {
-            return mAttackSpeed;
-        }
-
-        set
-        {
-            mAttackSpeed = value;
-        }
-    }
-
-    public float CriticalChance
-    {
-        get
-        {
-            return mCritChance;
-        }
-
-        set
-        {
-            mCritChance = value;
-        }
-    }
-
-    public int Defense
-    {
-        get
-        {
-            return mDefense;
-        }
-
-        set
-        {
-            mDefense = value;
-        }
-    }
-
-    public int Attack
-    {
-        get
-        {
-            return mAttack;
-        }
-
-        set
-        {
-            mAttack = value;
-        }
-    }
+    public float AttackSpeed;    
+    public float CritChance;    
+    public int Defense;    
+    public int Attack;
 
     void OnEnable()
     {
@@ -75,21 +19,21 @@ public class Magician : StateBehaviour, IStats
 
     public void CalculateAttackSpeed()
     {
-        mAttackSpeed = GetComponentInParent<StatModifiers>().Dexterity / 5;
+        AttackSpeed = GetComponentInParent<StatModifiers>().Dexterity / 5;
     }
 
     public void CalculateCritChance()
     {
-        mCritChance = GetComponentInParent<StatModifiers>().Dexterity / 7f;
+        CritChance = GetComponentInParent<StatModifiers>().Dexterity / 7f;
     }
 
     public void CalculateDefense()
     {
-        mDefense = GetComponentInParent<StatModifiers>().Stamina / 5;
+        Defense = GetComponentInParent<StatModifiers>().Stamina / 5;
     }
 
     public void CalculateAttack()
     {
-        mAttack = (int)(GetComponentInParent<StatModifiers>().Intelligence * 3);
+        Attack = (int)(GetComponentInParent<StatModifiers>().Intelligence * 3);
     }
 }
