@@ -12,6 +12,4 @@ public class FSMBlackboard : Blackboard {
     public static readonly int MERCENARY = 913225611;
     public static readonly int MAGICIAN = 1346017622;
     public static readonly int ASSIST = 590960297;
-    public static readonly int LEVELUP = 1870230623;
-    public static readonly int BILLPOSTER = 986124621;
 }
