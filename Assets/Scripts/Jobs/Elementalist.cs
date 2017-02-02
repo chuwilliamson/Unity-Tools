@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using BehaviourMachine;
-public class BillPoster : StateBehaviour
-{
+
+public class Elementalist : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
 		
