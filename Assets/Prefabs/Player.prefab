@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4964593896361630}
   - component: {fileID: 114855584704564738}
-  - component: {fileID: 114465932366613918}
+  - component: {fileID: 114440176975619870}
   m_Layer: 0
-  m_Name: PlayerController
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
     m_EventID: 1346017622
   - m_Destination: {fileID: 114427436935442526}
     m_EventID: 590960297
-  m_CachedInstanceID: 10032
+  m_CachedInstanceID: 10016
 --- !u!114 &114427436935442526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,12 +125,12 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 114326383372821194}
     m_EventID: 1870230623
-  m_CachedInstanceID: 10028
+  m_CachedInstanceID: 10008
   AttackSpeed: 0
   CritChance: 0
   Defense: 0
   Attack: 0
---- !u!114 &114465932366613918
+--- !u!114 &114440176975619870
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -138,13 +138,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1250735287676248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cc4ed7f5fc6c6045a82abbd69dff304, type: 3}
+  m_Script: {fileID: 11500000, guid: e8c3edfadbd1b424da0773e9ccf4a9b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Strength: 15
-  Stamina: 15
-  Dexterity: 15
-  Intelligence: 15
+  experience: 0
+  level: 0
 --- !u!114 &114539376728287698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,7 +163,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 114326383372821194}
     m_EventID: 1870230623
-  m_CachedInstanceID: 10024
+  m_CachedInstanceID: 10012
   AttackSpeed: 0
   CritChance: 0
   Defense: 0
@@ -190,7 +188,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 114326383372821194}
     m_EventID: 1870230623
-  m_CachedInstanceID: 10026
+  m_CachedInstanceID: 10010
   AttackSpeed: 0
   CritChance: 0
   Defense: 0
@@ -215,7 +213,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 114326383372821194}
     m_EventID: 1870230623
-  m_CachedInstanceID: 10022
+  m_CachedInstanceID: 10014
   AttackSpeed: 0
   CritChance: 0
   Defense: 0
@@ -238,7 +236,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 10036
+  m_CachedInstanceID: 10004
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -256,8 +254,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6010b8a58d2afd24f9d167d0ee904732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FloatVars: []
-  m_IntVars: []
+  m_FloatVars:
+  - m_ID: 1736293193
+    m_Name: Strength
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    value: 0
+  - m_ID: 1867906556
+    m_Name: Intelligence
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    value: 0
+  m_IntVars:
+  - m_ID: 831654276
+    m_Name: Dexterity
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    value: 0
+  - m_ID: 155664521
+    m_Name: Stamina
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    value: 0
+  - m_ID: 1533171761
+    m_Name: Defense
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    value: 0
+  - m_ID: 296907717
+    m_Name: CriticalHit
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    value: 0
+  - m_ID: 1296918104
+    m_Name: AttackSpeed
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    value: 0
+  - m_ID: 757342352
+    m_Name: AttackDamage
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    value: 0
   m_BoolVars: []
   m_StringVars: []
   m_Vector3Vars: []
@@ -296,7 +334,7 @@ MonoBehaviour:
     m_Blackboard: {fileID: 114764699929998910}
     m_IsConstant: 0
     m_IsSystem: 0
-  m_Namespace: 
+  m_Namespace: Job
 --- !u!114 &114855584704564738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,4 +367,4 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 114326383372821194}
     m_EventID: 1870230623
-  m_CachedInstanceID: 10034
+  m_CachedInstanceID: 10006

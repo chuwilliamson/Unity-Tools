@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -130,40 +130,44 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114707050877591212, guid: 3271aa78bb9679f479e133fc933fc2b2,
+    - target: {fileID: 114326383372821194, guid: 3271aa78bb9679f479e133fc933fc2b2,
         type: 2}
       propertyPath: m_CachedInstanceID
-      value: -2136
-      objectReference: {fileID: 0}
-    - target: {fileID: 114870280626705704, guid: 3271aa78bb9679f479e133fc933fc2b2,
-        type: 2}
-      propertyPath: m_CachedInstanceID
-      value: -2134
-      objectReference: {fileID: 0}
-    - target: {fileID: 114427436935442526, guid: 3271aa78bb9679f479e133fc933fc2b2,
-        type: 2}
-      propertyPath: m_CachedInstanceID
-      value: -2130
-      objectReference: {fileID: 0}
-    - target: {fileID: 114668903527507620, guid: 3271aa78bb9679f479e133fc933fc2b2,
-        type: 2}
-      propertyPath: m_CachedInstanceID
-      value: -2128
-      objectReference: {fileID: 0}
-    - target: {fileID: 114539376728287698, guid: 3271aa78bb9679f479e133fc933fc2b2,
-        type: 2}
-      propertyPath: m_CachedInstanceID
-      value: -2126
+      value: -1008
       objectReference: {fileID: 0}
     - target: {fileID: 114671373787063508, guid: 3271aa78bb9679f479e133fc933fc2b2,
         type: 2}
       propertyPath: m_CachedInstanceID
-      value: -2124
+      value: -1006
       objectReference: {fileID: 0}
-    - target: {fileID: 114326383372821194, guid: 3271aa78bb9679f479e133fc933fc2b2,
+    - target: {fileID: 114539376728287698, guid: 3271aa78bb9679f479e133fc933fc2b2,
         type: 2}
       propertyPath: m_CachedInstanceID
-      value: 10020
+      value: -1004
+      objectReference: {fileID: 0}
+    - target: {fileID: 114668903527507620, guid: 3271aa78bb9679f479e133fc933fc2b2,
+        type: 2}
+      propertyPath: m_CachedInstanceID
+      value: -1002
+      objectReference: {fileID: 0}
+    - target: {fileID: 114427436935442526, guid: 3271aa78bb9679f479e133fc933fc2b2,
+        type: 2}
+      propertyPath: m_CachedInstanceID
+      value: -1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114870280626705704, guid: 3271aa78bb9679f479e133fc933fc2b2,
+        type: 2}
+      propertyPath: m_CachedInstanceID
+      value: -998
+      objectReference: {fileID: 0}
+    - target: {fileID: 114707050877591212, guid: 3271aa78bb9679f479e133fc933fc2b2,
+        type: 2}
+      propertyPath: m_CachedInstanceID
+      value: -996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250735287676248, guid: 3271aa78bb9679f479e133fc933fc2b2, type: 2}
+      propertyPath: m_Name
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3271aa78bb9679f479e133fc933fc2b2, type: 2}

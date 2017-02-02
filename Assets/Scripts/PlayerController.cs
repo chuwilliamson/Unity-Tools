@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
         
     }
     void Start()
-    {        
-        blackboard = GetComponentInChildren<Blackboard>();
+    {
+        
     }
 
     // Update is called once per frame
