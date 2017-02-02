@@ -8,9 +8,6 @@ using BehaviourMachine;
 
 namespace Job {
     public class FSMBlackboard : Blackboard {
-        // FloatVars
-        public static readonly int Strength = 1736293193;
-        public static readonly int Intelligence = 1867906556;
         // IntVars
         public static readonly int Dexterity = 831654276;
         public static readonly int Stamina = 155664521;
@@ -18,6 +15,8 @@ namespace Job {
         public static readonly int CriticalHit = 296907717;
         public static readonly int AttackSpeed = 1296918104;
         public static readonly int AttackDamage = 757342352;
+        public static readonly int Strength = 2144370348;
+        public static readonly int Intelligence = 1003562370;
         // FsmEvents
         public static readonly int ACROBAT = 54644675;
         public static readonly int MERCENARY = 913225611;

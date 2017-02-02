@@ -4,15 +4,11 @@ using UnityEngine;
 using BehaviourMachine;
 using System;
 
-public class Mercenary : StateBehaviour, IStats
+public class Mercenary : JobState
 {
-    public float AttackSpeed;    
-    public float CritChance;    
-    public int Defense;    
-    public int Attack;
-	
     void OnEnable()
     {
+        Debug.Log("Calc Mercenary");
         CalculateAttackSpeed();
         CalculateCritChance();
         CalculateDefense();
@@ -21,21 +17,21 @@ public class Mercenary : StateBehaviour, IStats
 
     public void CalculateAttackSpeed()
     {
-        AttackSpeed = GetComponentInParent<StatModifiers>().Dexterity / 10;
+        AttackSpeed = (int)(Dexterity * 0.1f);
     }
 
     public void CalculateCritChance()
     {
-        CritChance = GetComponentInParent<StatModifiers>().Dexterity / 5;
+        CriticalHit = (int)(Dexterity * 0.5f);
     }
 
     public void CalculateDefense()
     {
-        Defense = GetComponentInParent<StatModifiers>().Stamina / 2; 
+        Defense = (int)(Stamina * 0.5f); 
     }
 
     public void CalculateAttack()
     {
-        Attack = GetComponentInParent<StatModifiers>().Strength * 5;
+        AttackDamage = (int)(Strength * 5.0f);
     }
 }
