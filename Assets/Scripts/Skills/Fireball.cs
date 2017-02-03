@@ -11,10 +11,13 @@ public class Fireball : ISkill
     public int MaxLevel;
     public int LevelUpCost;
     public ISkill PreviousSkill;
+    public IAttacker Owner;
+
+
 
     public void Cast(IDamageable target)
     {
-        target.TakeDamage();
+        target.TakeDamage(Owner);
     }
 
     public bool LevelUp()
@@ -31,5 +34,10 @@ public class Fireball : ISkill
     {
         if (skill == PreviousSkill)
             Level++;
+    }
+
+    public bool IsUnlock()
+    {
+        throw new NotImplementedException();
     }
 }
