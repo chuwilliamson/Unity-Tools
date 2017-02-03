@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4964593896361630}
   - component: {fileID: 114855584704564738}
   - component: {fileID: 114440176975619870}
+  - component: {fileID: 114803607552209750}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -44,6 +45,26 @@ GameObject:
   - component: {fileID: 114668903527507620}
   - component: {fileID: 114671373787063508}
   - component: {fileID: 114326383372821194}
+  - component: {fileID: 114313938205632652}
+  - component: {fileID: 114799418827761792}
+  - component: {fileID: 114011176069723516}
+  - component: {fileID: 114095636713308714}
+  - component: {fileID: 114795674396380590}
+  - component: {fileID: 114592573152018780}
+  - component: {fileID: 114448827139644056}
+  - component: {fileID: 114492497940243276}
+  - component: {fileID: 114455290087920316}
+  - component: {fileID: 114862777709794238}
+  - component: {fileID: 114626605408442938}
+  - component: {fileID: 114182687186671252}
+  - component: {fileID: 114496794061910274}
+  - component: {fileID: 114367782263659638}
+  - component: {fileID: 114050654787629428}
+  - component: {fileID: 114092736807173172}
+  - component: {fileID: 114930776619500610}
+  - component: {fileID: 114812437958870382}
+  - component: {fileID: 114893803255579778}
+  - component: {fileID: 114961859470425826}
   m_Layer: 0
   m_Name: FSM
   m_TagString: Untagged
@@ -78,6 +99,168 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114011176069723516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760635e0fd96a2640847127bfdf706cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: RingMaster
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 300, y: 330}
+  m_Transitions:
+  - m_Destination: {fileID: 114313938205632652}
+    m_EventID: 907421782
+  m_CachedInstanceID: -74448
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
+--- !u!114 &114050654787629428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67573596594aa6b42bbfb9976697f4ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: CrackShooter
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: -40, y: 90}
+  m_Transitions: []
+  m_CachedInstanceID: -74472
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
+--- !u!114 &114092736807173172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539919f6026a4d94b911dedfb50c13dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Harlequin
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: -200, y: 90}
+  m_Transitions: []
+  m_CachedInstanceID: -74474
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
+--- !u!114 &114095636713308714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026f563a1efd0fb42b3bca03d309fb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: JobSelection
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 380, y: 230}
+  m_Transitions:
+  - m_Destination: {fileID: 114011176069723516}
+    m_EventID: 359671262
+  - m_Destination: {fileID: 114799418827761792}
+    m_EventID: 1474306379
+  m_CachedInstanceID: -74450
+--- !u!114 &114182687186671252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61779a06d6cd6e45b44924bdc4c4917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Knight
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 450, y: 10}
+  m_Transitions:
+  - m_Destination: {fileID: 114862777709794238}
+    m_EventID: 1313063758
+  m_CachedInstanceID: -74466
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
+--- !u!114 &114313938205632652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d690dee160a218742a55229c8b201e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Seraph
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 300, y: 400}
+  m_Transitions: []
+  m_CachedInstanceID: -74444
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
 --- !u!114 &114326383372821194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,7 +277,7 @@ MonoBehaviour:
   m_StateName: JobSelection
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: 120, y: -80}
+  m_Position: {x: 120, y: -160}
   m_Transitions:
   - m_Destination: {fileID: 114539376728287698}
     m_EventID: 54644675
@@ -104,7 +287,30 @@ MonoBehaviour:
     m_EventID: 1346017622
   - m_Destination: {fileID: 114427436935442526}
     m_EventID: 590960297
-  m_CachedInstanceID: 10016
+  m_CachedInstanceID: 10022
+--- !u!114 &114367782263659638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026f563a1efd0fb42b3bca03d309fb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: JobSelection
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 370, y: -80}
+  m_Transitions:
+  - m_Destination: {fileID: 114496794061910274}
+    m_EventID: 1731904357
+  - m_Destination: {fileID: 114182687186671252}
+    m_EventID: 1811169490
+  m_CachedInstanceID: -74470
 --- !u!114 &114427436935442526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,15 +327,19 @@ MonoBehaviour:
   m_StateName: Assist
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: 510, y: 110}
+  m_Position: {x: 380, y: 160}
   m_Transitions:
-  - m_Destination: {fileID: 114326383372821194}
+  - m_Destination: {fileID: 114095636713308714}
     m_EventID: 1870230623
-  m_CachedInstanceID: 10008
-  AttackSpeed: 0
-  CritChance: 0
+  m_CachedInstanceID: 10014
+  Dexterity: 831654276
+  Stamina: 155664521
   Defense: 0
-  Attack: 0
+  CriticalHit: 296907717
+  AttackSpeed: 1296918104
+  AttackDamage: 757342352
+  Strength: 2144370348
+  Intelligence: 1003562370
 --- !u!114 &114440176975619870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,6 +353,116 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   experience: 0
   level: 0
+--- !u!114 &114448827139644056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde90daa7a9e1374eae3847bd4905f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Elementor
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: -40, y: 340}
+  m_Transitions:
+  - m_Destination: {fileID: 114592573152018780}
+    m_EventID: 1775671639
+  m_CachedInstanceID: -74456
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
+--- !u!114 &114455290087920316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026f563a1efd0fb42b3bca03d309fb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: JobSelection
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: -120, y: 250}
+  m_Transitions:
+  - m_Destination: {fileID: 114492497940243276}
+    m_EventID: 85833958
+  - m_Destination: {fileID: 114448827139644056}
+    m_EventID: 590536267
+  m_CachedInstanceID: -74460
+--- !u!114 &114492497940243276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2783d47a361204d9e6976f515fc3d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Psykeeper
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: -200, y: 340}
+  m_Transitions:
+  - m_Destination: {fileID: 114795674396380590}
+    m_EventID: 28895424
+  m_CachedInstanceID: -74458
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
+--- !u!114 &114496794061910274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 594bb64cf9e4c9840871fa3f9bde08d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Blade
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 290, y: 10}
+  m_Transitions:
+  - m_Destination: {fileID: 114626605408442938}
+    m_EventID: 379273497
+  m_CachedInstanceID: -74468
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
 --- !u!114 &114539376728287698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,15 +479,73 @@ MonoBehaviour:
   m_StateName: Acrobat
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: -220, y: 170}
+  m_Position: {x: -120, y: -150}
   m_Transitions:
-  - m_Destination: {fileID: 114326383372821194}
+  - m_Destination: {fileID: 114893803255579778}
     m_EventID: 1870230623
-  m_CachedInstanceID: 10012
-  AttackSpeed: 0
-  CritChance: 0
+  m_CachedInstanceID: 10018
+  Dexterity: 831654276
+  Stamina: 155664521
   Defense: 0
-  Attack: 0
+  CriticalHit: 296907717
+  AttackSpeed: 1296918104
+  AttackDamage: 757342352
+  Strength: 2144370348
+  Intelligence: 1003562370
+--- !u!114 &114592573152018780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a6060adfbf02946a929dac91c0d3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Arcanist
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: -40, y: 420}
+  m_Transitions: []
+  m_CachedInstanceID: -74454
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
+--- !u!114 &114626605408442938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ef6d836331a3143aa5dc0377b1885a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Slayer
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 290, y: 80}
+  m_Transitions: []
+  m_CachedInstanceID: -74464
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
 --- !u!114 &114668903527507620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,15 +562,19 @@ MonoBehaviour:
   m_StateName: Magician
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: 510, y: -80}
+  m_Position: {x: -120, y: 170}
   m_Transitions:
-  - m_Destination: {fileID: 114326383372821194}
+  - m_Destination: {fileID: 114455290087920316}
     m_EventID: 1870230623
-  m_CachedInstanceID: 10010
-  AttackSpeed: 0
-  CritChance: 0
+  m_CachedInstanceID: 10016
+  Dexterity: 831654276
+  Stamina: 155664521
   Defense: 0
-  Attack: 0
+  CriticalHit: 296907717
+  AttackSpeed: 1296918104
+  AttackDamage: 757342352
+  Strength: 2144370348
+  Intelligence: 1003562370
 --- !u!114 &114671373787063508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,15 +591,19 @@ MonoBehaviour:
   m_StateName: Mercenary
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: 40, y: 180}
+  m_Position: {x: 370, y: -150}
   m_Transitions:
-  - m_Destination: {fileID: 114326383372821194}
+  - m_Destination: {fileID: 114367782263659638}
     m_EventID: 1870230623
-  m_CachedInstanceID: 10014
-  AttackSpeed: 0
-  CritChance: 0
+  m_CachedInstanceID: 10020
+  Dexterity: 831654276
+  Stamina: 155664521
   Defense: 0
-  Attack: 0
+  CriticalHit: 296907717
+  AttackSpeed: 1296918104
+  AttackDamage: 757342352
+  Strength: 2144370348
+  Intelligence: 1003562370
 --- !u!114 &114707050877591212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,7 +622,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 10004
+  m_CachedInstanceID: 10010
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -254,48 +640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6010b8a58d2afd24f9d167d0ee904732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FloatVars:
-  - m_ID: 1736293193
-    m_Name: Strength
-    m_Blackboard: {fileID: 114764699929998910}
-    m_IsConstant: 0
-    value: 0
-  - m_ID: 1867906556
-    m_Name: Intelligence
-    m_Blackboard: {fileID: 114764699929998910}
-    m_IsConstant: 0
-    value: 0
-  m_IntVars:
-  - m_ID: 831654276
-    m_Name: Dexterity
-    m_Blackboard: {fileID: 114764699929998910}
-    m_IsConstant: 0
-    value: 0
-  - m_ID: 155664521
-    m_Name: Stamina
-    m_Blackboard: {fileID: 114764699929998910}
-    m_IsConstant: 0
-    value: 0
-  - m_ID: 1533171761
-    m_Name: Defense
-    m_Blackboard: {fileID: 114764699929998910}
-    m_IsConstant: 0
-    value: 0
-  - m_ID: 296907717
-    m_Name: CriticalHit
-    m_Blackboard: {fileID: 114764699929998910}
-    m_IsConstant: 0
-    value: 0
-  - m_ID: 1296918104
-    m_Name: AttackSpeed
-    m_Blackboard: {fileID: 114764699929998910}
-    m_IsConstant: 0
-    value: 0
-  - m_ID: 757342352
-    m_Name: AttackDamage
-    m_Blackboard: {fileID: 114764699929998910}
-    m_IsConstant: 0
-    value: 0
+  m_FloatVars: []
+  m_IntVars: []
   m_BoolVars: []
   m_StringVars: []
   m_Vector3Vars: []
@@ -334,7 +680,187 @@ MonoBehaviour:
     m_Blackboard: {fileID: 114764699929998910}
     m_IsConstant: 0
     m_IsSystem: 0
+  - m_ID: 1811169490
+    m_Name: KNIGHT
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 1731904357
+    m_Name: BLADE
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 304654958
+    m_Name: RANGER
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 377815573
+    m_Name: JESTER
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 359671262
+    m_Name: RINGMASTER
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 590536267
+    m_Name: ELEMENTOR
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 85833958
+    m_Name: PSYKEEPER
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 1474306379
+    m_Name: BILLPOSTER
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 1313063758
+    m_Name: TEMPLAR
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 379273497
+    m_Name: SLAYER
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 77872159
+    m_Name: CRACKSHOOTER
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 1027508432
+    m_Name: HARLEQUIN
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 907421782
+    m_Name: SERAPH
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 1635711946
+    m_Name: FORCEMASTER
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 1775671639
+    m_Name: ARCANIST
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
+  - m_ID: 28895424
+    m_Name: MENTALIST
+    m_Blackboard: {fileID: 114764699929998910}
+    m_IsConstant: 0
+    m_IsSystem: 0
   m_Namespace: Job
+--- !u!114 &114795674396380590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03bc4bbbc6d656947bebee2780367034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Mentalist
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: -200, y: 420}
+  m_Transitions: []
+  m_CachedInstanceID: -74452
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
+--- !u!114 &114799418827761792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e400936481cb7ef49a216f721f66da52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: BillPoster
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 460, y: 330}
+  m_Transitions:
+  - m_Destination: {fileID: 114961859470425826}
+    m_EventID: 1635711946
+  m_CachedInstanceID: -74446
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
+--- !u!114 &114803607552209750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1250735287676248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c36917aa1bc3d4c98562deeaaed6d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentHealth: 0
+  MaxHealth: 0
+  Level: 0
+  Name: Test Dummy
+--- !u!114 &114812437958870382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be8c7d76ab4fc1c42ba0460289f1d7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Jester
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: -200, y: 10}
+  m_Transitions:
+  - m_Destination: {fileID: 114092736807173172}
+    m_EventID: 1027508432
+  m_CachedInstanceID: -74478
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
 --- !u!114 &114855584704564738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -347,6 +873,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackboard: {fileID: 0}
+--- !u!114 &114862777709794238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4cc5ae43960c5247b9809ce2fa8906b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Templar
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 450, y: 80}
+  m_Transitions: []
+  m_CachedInstanceID: -74462
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
 --- !u!114 &114870280626705704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,4 +920,91 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 114326383372821194}
     m_EventID: 1870230623
-  m_CachedInstanceID: 10006
+  m_CachedInstanceID: 10012
+  Dexterity: 831654276
+  Stamina: 155664521
+  Defense: 1533171761
+  CriticalHit: 296907717
+  AttackSpeed: 1296918104
+  AttackDamage: 757342352
+  Strength: 2144370348
+  Intelligence: 1003562370
+--- !u!114 &114893803255579778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026f563a1efd0fb42b3bca03d309fb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: JobSelection
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: -120, y: -80}
+  m_Transitions:
+  - m_Destination: {fileID: 114812437958870382}
+    m_EventID: 377815573
+  - m_Destination: {fileID: 114930776619500610}
+    m_EventID: 304654958
+  m_CachedInstanceID: -74480
+--- !u!114 &114930776619500610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd927d14b3fd4a48b310d8094591a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: Ranger
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: -40, y: 10}
+  m_Transitions:
+  - m_Destination: {fileID: 114050654787629428}
+    m_EventID: 77872159
+  m_CachedInstanceID: -74476
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
+--- !u!114 &114961859470425826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288653993500020}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4446d3e20fa2e4a9a20a446985cbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 114764699929998910}
+  m_Parent: {fileID: 114707050877591212}
+  m_StateName: ForceMaster
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 460, y: 400}
+  m_Transitions: []
+  m_CachedInstanceID: -74442
+  Dexterity: 0
+  Stamina: 0
+  Defense: 0
+  CriticalHit: 0
+  AttackSpeed: 0
+  AttackDamage: 0
+  Strength: 0
+  Intelligence: 0
