@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mentalist : JobState
+public class Elementor : JobState
 {
     void OnEnable()
     {

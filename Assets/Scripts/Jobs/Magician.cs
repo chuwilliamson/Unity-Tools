@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using BehaviourMachine;
-public class Magician : StateBehaviour, IStats
+public class Magician : JobState
 {
-    public float AttackSpeed;    
-    public float CritChance;    
-    public int Defense;    
-    public int Attack;
-
     void OnEnable()
     {
         CalculateAttackSpeed();
@@ -19,21 +14,21 @@ public class Magician : StateBehaviour, IStats
 
     public void CalculateAttackSpeed()
     {
-        AttackSpeed = GetComponentInParent<StatModifiers>().Dexterity / 5;
+        AttackSpeed = (int)(Dexterity * 0.5f);
     }
 
     public void CalculateCritChance()
     {
-        CritChance = GetComponentInParent<StatModifiers>().Dexterity / 7f;
+        CriticalHit = (int)(Dexterity * 0.7f);
     }
 
     public void CalculateDefense()
     {
-        Defense = GetComponentInParent<StatModifiers>().Stamina / 5;
+        Defense = (int)(Stamina * 0.5f);
     }
 
     public void CalculateAttack()
     {
-        Attack = (int)(GetComponentInParent<StatModifiers>().Intelligence * 3);
+        AttackDamage = (int)(Intelligence * 3.0f);
     }
 }

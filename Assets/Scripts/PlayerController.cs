@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        
+        blackboard = GetComponentInChildren<Blackboard>();
     }
     void Start()
     {

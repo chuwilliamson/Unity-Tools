@@ -2,15 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using BehaviourMachine;
-public class Assist : StateBehaviour, IStats
-{
-    
-    public float AttackSpeed;    
-    public float CritChance;    
-    public int Defense;    
-    public int Attack;
-
-    
+public class Assist : JobState
+{    
     void OnEnable()
     {
         CalculateAttackSpeed();
@@ -21,21 +14,21 @@ public class Assist : StateBehaviour, IStats
 
     public void CalculateAttackSpeed()
     {
-        AttackSpeed = GetComponentInParent<StatModifiers>().Dexterity / 5;
+        AttackSpeed = (int)(Dexterity / 5f);
     }
 
     public void CalculateCritChance()
     {
-        CritChance = GetComponentInParent<StatModifiers>().Dexterity / 7f;
+        CriticalHit = (int)(Dexterity / 7f);
     }
 
     public void CalculateDefense()
     {
-        Defense = GetComponentInParent<StatModifiers>().Stamina / 5;
+        Defense = (int)(Stamina / 5f);
     }
 
     public void CalculateAttack()
     {
-        Attack = (int)(GetComponentInParent<StatModifiers>().Strength * 2f);
+        AttackDamage = (int)(Strength * 2f);
     }
 }
