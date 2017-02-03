@@ -7,7 +7,8 @@ public class Character : MonoBehaviour, IDamageable
 {
     void Start()
     {
-
+        Skills = new List<ISkill>();
+        Skills.Add(new Fireball());
     }
 
     public void TakeDamage()
@@ -15,6 +16,14 @@ public class Character : MonoBehaviour, IDamageable
         CurrentHealth--;
     }
 
+    [ContextMenu("Fire")]
+    void Attack()
+    {
+        Skills[0].Cast(Target);
+    }
+
+    public List<ISkill> Skills;
+    public IDamageable Target;
     public uint CurrentHealth;
     public int MaxHealth;
     public uint Level;
