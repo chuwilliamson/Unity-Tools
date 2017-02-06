@@ -41,8 +41,10 @@ public class SkillTree
 
         public void AddToSkill(ISkill skill)
         {
-            //if (/*From.Contains(skill) &&*/  !To.Contains(skill))
-                To.Add(skill);
+            //List are acting weird when it comes to Interfaces and think
+            //items are in the list when they aren't
+            //Will devote more time to this problem later
+            To.Add(skill);
         }
     }
 
