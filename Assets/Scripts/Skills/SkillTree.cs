@@ -41,8 +41,9 @@ public class SkillTree
 
         public void AddToSkill(ISkill skill)
         {
-            //List are acting weird when it comes to Interfaces and think
-            //items are in the list when they aren't
+            //List are acting weird when it comes to Interfaces and it thinks
+            //the item passed in to the function is all ready in the list when it
+            //isn't. This does not happen all the time. 
             //Will devote more time to this problem later
             To.Add(skill);
         }
