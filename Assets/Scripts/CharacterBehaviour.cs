@@ -13,11 +13,6 @@ public class CharacterBehaviour : MonoBehaviour, IDamageable, IAttacker
         Fireball b = new Fireball();
         Fireball c = new Fireball();
         Fireball d = new Fireball();
-
-        skillTree.AddSkill(a, null);
-        skillTree.AddSkill(b, a);
-        skillTree.AddSkill(c, b);
-        skillTree.AddSkill(d, c);
     }
 
     public void TakeDamage(IAttacker attacker)
@@ -67,6 +62,11 @@ public class CharacterBehaviour : MonoBehaviour, IDamageable, IAttacker
         //    }
         //}        
         return tar;
+    }
+
+    public uint GetCharacterLevel()
+    {
+        return Level;
     }
 
     public SkillTree skillTree;

@@ -4,53 +4,66 @@ using UnityEngine;
 
 public class SkillTree
 {
-    public Dictionary<ISkill, bool> Skills;
-    public List<SkillNode> Nodes;
+    List<ISkill> Skills;
+    List<SkillLink> Links;
 
-    public class SkillNode
+    class SkillLink
     {
-        public ISkill Previous;
-        public ISkill Current; 
+        public List<ISkill> From;
+        public List<ISkill> To;
+        public bool IsLinked;
 
-        public SkillNode(ISkill skill)
+        public SkillLink()
         {
-            Current = skill;
-            Previous = null;
+
         }
 
-        public SkillNode(ISkill skill, ISkill previous)
+        public bool UnLockSkills()
         {
-            Current = skill;
-            Previous = previous;
+            foreach(ISkill sn in From)
+            {
+                if (sn.IsUnlock() == false)
+                    return false;
+            }
+            foreach(ISkill sn in To)
+            {
+                sn.UnLock();
+            }
+            return true;
         }
 
-        public void Unlock()
+        public void AddFromSkill(ISkill skill)
         {
-            if (Previous.IsUnlock())
-                Current.LevelUp();
+            if (!From.Contains(skill) && !To.Contains(skill))
+                From.Add(skill);
+        }
+
+        public void AddToSkill(ISkill skill)
+        {
+            if (!From.Contains(skill) && !To.Contains(skill))
+                To.Add(skill);
         }
     }
-        
+
     public SkillTree()
     {
-        Skills = new Dictionary<ISkill, bool>();
+        Skills = new List<ISkill>();
     }
 
-    public void AddSkill(ISkill skill, ISkill previous)
+    public bool AddSkill(ISkill skill)
     {
-        if(Nodes == null)
+        if (Skills.Contains(skill))
+            return false;
+        Skills.Add(skill);
+        return true;
+    }
+
+    public void LinkSkill(ISkill to, ISkill from)
+    {
+        foreach(SkillLink link in Links)
         {
-            Nodes = new List<SkillNode>();
-            Nodes.Add(new SkillNode(skill));
-            Skills.Add(skill, false);
-        }
-        else
-        {
-            if(Skills.ContainsKey(previous))
-            {
-                Nodes.Add(new SkillNode(skill, previous));
-                Skills.Add(skill, false);
-            }
+            link.AddFromSkill(from);
+            link.AddToSkill(to);
         }
     }
 }

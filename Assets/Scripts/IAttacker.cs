@@ -7,4 +7,6 @@ public interface IAttacker
     void Attack(int skillIndex);
 
     IDamageable SelectTarget();
+
+    uint GetCharacterLevel();
 }

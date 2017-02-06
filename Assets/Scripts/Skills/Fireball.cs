@@ -12,7 +12,7 @@ public class Fireball : ISkill
     public int LevelUpCost;
     public ISkill PreviousSkill;
     public IAttacker Owner;
-
+    public int CharacterLevelRequirements;
 
 
     public void Cast(IDamageable target)
@@ -38,6 +38,13 @@ public class Fireball : ISkill
 
     public bool IsUnlock()
     {
-        throw new NotImplementedException();
+        return (Level > 0) ? true : false;
+    }
+
+    public bool MeetsCharacterRequirements()
+    {
+        if (Owner.GetCharacterLevel() >= CharacterLevelRequirements)
+            return true;
+        return false;
     }
 }
