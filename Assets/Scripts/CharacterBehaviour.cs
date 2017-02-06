@@ -10,9 +10,17 @@ public class CharacterBehaviour : MonoBehaviour, IDamageable, IAttacker
         Skills = new List<ISkill>();
         skillTree = new SkillTree();
         Fireball a = new Fireball();
-        Fireball b = new Fireball();
-        Fireball c = new Fireball();
-        Fireball d = new Fireball();
+        FrostBolt b = new FrostBolt();
+        Lighting c = new Lighting();
+        poly d = new poly();
+
+        skillTree.AddSkill(a);
+        skillTree.AddSkill(b);
+        skillTree.AddSkill(c);
+        skillTree.AddSkill(d);
+        skillTree.LinkSkill(a, b);
+        skillTree.LinkSkill(a, c);
+        skillTree.LinkSkill(c, d);
     }
 
     public void TakeDamage(IAttacker attacker)
@@ -51,16 +59,7 @@ public class CharacterBehaviour : MonoBehaviour, IDamageable, IAttacker
 
     public IDamageable SelectTarget()
     {
-        ////If the character is a player
-        IDamageable tar = null;
-        //RaycastHit hitInfo = new RaycastHit();
-        //if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo))
-        //{
-        //    if (hitInfo.collider.GetComponent<CharacterBehaviour>() != null)
-        //    {
-        //        tar = hitInfo.collider.GetComponent<CharacterBehaviour>();
-        //    }
-        //}        
+        IDamageable tar = null; 
         return tar;
     }
 

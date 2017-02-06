@@ -15,7 +15,8 @@ public class SkillTree
 
         public SkillLink()
         {
-
+            From = new List<ISkill>();
+            To = new List<ISkill>();
         }
 
         public bool UnLockSkills()
@@ -40,7 +41,7 @@ public class SkillTree
 
         public void AddToSkill(ISkill skill)
         {
-            if (!From.Contains(skill) && !To.Contains(skill))
+            //if (/*From.Contains(skill) &&*/  !To.Contains(skill))
                 To.Add(skill);
         }
     }
@@ -48,22 +49,35 @@ public class SkillTree
     public SkillTree()
     {
         Skills = new List<ISkill>();
+        Links = new List<SkillLink>();
     }
 
     public bool AddSkill(ISkill skill)
     {
-        if (Skills.Contains(skill))
-            return false;
+        //if (Skills.Contains(skill))
+        //    return false;
         Skills.Add(skill);
         return true;
     }
 
-    public void LinkSkill(ISkill to, ISkill from)
+    public void LinkSkill(ISkill from, ISkill to)
     {
-        foreach(SkillLink link in Links)
+        bool CreateNew = true;
+        foreach(SkillLink l in Links)
         {
+            if (l.From.Contains(from))
+            {
+                l.AddToSkill(to);
+                CreateNew = false;
+            }
+        }
+        if(CreateNew)
+        {
+            SkillLink link = new SkillLink();
             link.AddFromSkill(from);
             link.AddToSkill(to);
+            Links.Add(link);
         }
+
     }
 }
