@@ -9,5 +9,9 @@ public interface ISkill
 
     bool LevelUp();
 
-    void UnlockSkill(ISkill skill);
+    bool IsUnlock();
+
+    void UnLock();
+
+    bool MeetsCharacterRequirements();
 }
