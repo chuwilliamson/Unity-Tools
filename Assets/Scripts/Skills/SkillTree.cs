@@ -49,6 +49,18 @@ public class SkillTree
         }
     }
 
+    public void LevelUpSkill(ISkill a)
+    {
+        if(Skills.Contains(a))
+        {
+            foreach(SkillLink link in Links)
+            {
+                link.UnLockSkills();
+            }
+            a.UnLock();
+        }
+    }
+
     public SkillTree()
     {
         Skills = new List<ISkill>();

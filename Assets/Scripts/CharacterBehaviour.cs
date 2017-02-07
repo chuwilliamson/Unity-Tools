@@ -5,15 +5,19 @@ using UnityEngine;
 
 public class CharacterBehaviour : MonoBehaviour, IDamageable, IAttacker
 {
+    public Fireball a = new Fireball();
+    public FrostBolt b = new FrostBolt();
+    public Lighting c = new Lighting();
+    public poly d = new poly();
     void Start()
     {
         Skills = new List<ISkill>();
         skillTree = new SkillTree();
-        Fireball a = new Fireball();
-        FrostBolt b = new FrostBolt();
-        Lighting c = new Lighting();
-        poly d = new poly();
 
+         a = new Fireball();
+         b = new FrostBolt();
+         c = new Lighting();
+         d = new poly();
         skillTree.AddSkill(a);
         skillTree.AddSkill(b);
         skillTree.AddSkill(c);
@@ -53,7 +57,7 @@ public class CharacterBehaviour : MonoBehaviour, IDamageable, IAttacker
     {
         if (Input.GetMouseButtonDown(0))
         {
-            //sTarget = SelectTarget();
+            skillTree.LevelUpSkill(a);
         }
     }
 
