@@ -25,7 +25,7 @@ public class SkillTree
             {
                 if (sn.IsUnlock() == false)
                     return false;
-            }
+            }            
             foreach(ISkill sn in To)
             {
                 sn.UnLock();
@@ -45,7 +45,8 @@ public class SkillTree
             //the item passed in to the function is all ready in the list when it
             //isn't. This does not happen all the time. 
             //Will devote more time to this problem later
-            To.Add(skill);
+            if(skill != null)
+                To.Add(skill);
         }
     }
 

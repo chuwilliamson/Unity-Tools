@@ -14,7 +14,13 @@ public class Fireball : ISkill
     public IAttacker Owner;
     public int CharacterLevelRequirements;
     public bool IsLearnable;
-    string Name;
+    public string Name;
+
+    public Fireball(IAttacker owner, string name)
+    {
+        Owner = owner;
+        Name = name;
+    }
 
     public void Cast(IDamageable target)
     {
@@ -23,7 +29,7 @@ public class Fireball : ISkill
 
     public bool LevelUp()
     {
-        if (Level < MaxLevel)
+        if (Level < MaxLevel && Owner.GetCharacterLevel() >= CharacterLevelRequirements)
         {
             Level++;
             return true;
@@ -49,6 +55,6 @@ public class Fireball : ISkill
     public void UnLock()
     {
         IsLearnable = true;
-        Level++;
+        LevelUp();
     }
 }

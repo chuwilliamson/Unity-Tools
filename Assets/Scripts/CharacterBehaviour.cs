@@ -5,19 +5,20 @@ using UnityEngine;
 
 public class CharacterBehaviour : MonoBehaviour, IDamageable, IAttacker
 {
-    public Fireball a = new Fireball();
-    public FrostBolt b = new FrostBolt();
-    public Lighting c = new Lighting();
-    public poly d = new poly();
+    public Fireball a;
+    public Fireball b;
+    public Fireball c;
+    public Fireball d;
+
     void Start()
     {
         Skills = new List<ISkill>();
         skillTree = new SkillTree();
 
-         a = new Fireball();
-         b = new FrostBolt();
-         c = new Lighting();
-         d = new poly();
+        a = new Fireball(this, "Fire");
+        b = new Fireball(this, "Water");
+        c = new Fireball(this, "Ice");
+        d = new Fireball(this, "Rock");
         skillTree.AddSkill(a);
         skillTree.AddSkill(b);
         skillTree.AddSkill(c);
