@@ -14,18 +14,6 @@ public class CharacterBehaviour : MonoBehaviour, IDamageable, IAttacker
     {
         Skills = new List<ISkill>();
         skillTree = new SkillTree();
-
-        a = new Fireball(this, "Fire");
-        b = new Fireball(this, "Water");
-        c = new Fireball(this, "Ice");
-        d = new Fireball(this, "Rock");
-        skillTree.AddSkill(a);
-        skillTree.AddSkill(b);
-        skillTree.AddSkill(c);
-        skillTree.AddSkill(d);
-        skillTree.LinkSkill(a, b);
-        skillTree.LinkSkill(a, c);
-        skillTree.LinkSkill(c, d);
     }
 
     public void TakeDamage(IAttacker attacker)
@@ -58,7 +46,12 @@ public class CharacterBehaviour : MonoBehaviour, IDamageable, IAttacker
     {
         if (Input.GetMouseButtonDown(0))
         {
-            skillTree.LevelUpSkill(a);
+            skillTree.UnLockSkill(a);
+        }
+
+        if(Input.GetMouseButtonDown(1))
+        {
+            a.LevelUp();
         }
     }
 

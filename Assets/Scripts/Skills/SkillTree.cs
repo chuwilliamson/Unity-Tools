@@ -21,14 +21,18 @@ public class SkillTree
 
         public bool UnLockSkills()
         {
+            bool unlock = true;
             foreach(ISkill sn in From)
             {
                 if (sn.IsUnlock() == false)
-                    return false;
+                    unlock = false;
             }            
-            foreach(ISkill sn in To)
+            if(unlock == true)
             {
-                sn.UnLock();
+                foreach (ISkill sn in To)
+                {
+                    sn.UnLock();
+                }
             }
             return true;
         }
@@ -50,8 +54,8 @@ public class SkillTree
         }
     }
 
-    public void LevelUpSkill(ISkill a)
-    {
+    public void UnLockSkill(ISkill a)
+    {        
         if(Skills.Contains(a))
         {
             foreach(SkillLink link in Links)

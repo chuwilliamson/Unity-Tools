@@ -40,10 +40,10 @@ public class Fireball : ISkill
 
     public bool IsUnlock()
     {
-        return IsLearnable;
+        if(IsLearnable && Level > 0)
+            return true;
+        return false;
     }
-
-       
 
     public bool MeetsCharacterRequirements()
     {
@@ -54,7 +54,9 @@ public class Fireball : ISkill
 
     public void UnLock()
     {
-        IsLearnable = true;
-        LevelUp();
+        if (Owner.GetCharacterLevel() >= CharacterLevelRequirements)
+        {
+            IsLearnable = true;
+        }
     }
 }
