@@ -47,6 +47,8 @@ public class CharacterBehaviour : MonoBehaviour, IDamageable, IAttacker
         if (Input.GetMouseButtonDown(0))
         {
             skillTree.UnLockSkill(a);
+            if (skillTree.GetSkill(a) != null)
+                Skills.Add(skillTree.GetSkill(a));
         }
 
         if(Input.GetMouseButtonDown(1))

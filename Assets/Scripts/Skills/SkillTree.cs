@@ -66,6 +66,13 @@ public class SkillTree
         }
     }
 
+    public ISkill GetSkill(ISkill check)
+    {
+        if (check.IsUnlock())
+            return check;
+        return null;
+    }
+
     public SkillTree()
     {
         Skills = new List<ISkill>();
