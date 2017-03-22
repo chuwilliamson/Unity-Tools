@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class Fireball : ISkill
 {
     public int ResourceCost;
@@ -10,11 +11,16 @@ public class Fireball : ISkill
     public int Level;
     public int MaxLevel;
     public int LevelUpCost;
-    public ISkill PreviousSkill;
     public IAttacker Owner;
     public int CharacterLevelRequirements;
     public bool IsLearnable;
-    string Name;
+    public string Name;
+
+    public Fireball(IAttacker owner, string name)
+    {
+        Owner = owner;
+        Name = name;
+    }
 
     public void Cast(IDamageable target)
     {
@@ -23,7 +29,7 @@ public class Fireball : ISkill
 
     public bool LevelUp()
     {
-        if (Level < MaxLevel)
+        if (Level < MaxLevel && Owner.GetCharacterLevel() >= CharacterLevelRequirements)
         {
             Level++;
             return true;
@@ -31,18 +37,13 @@ public class Fireball : ISkill
         return false;
     }
 
-    public void UnlockSkill(ISkill skill)
-    {
-        if (skill == PreviousSkill)
-            Level++;
-    }
 
     public bool IsUnlock()
     {
-        return IsLearnable;
+        if(IsLearnable && Level > 0)
+            return true;
+        return false;
     }
-
-       
 
     public bool MeetsCharacterRequirements()
     {
@@ -53,6 +54,9 @@ public class Fireball : ISkill
 
     public void UnLock()
     {
-        IsLearnable = true;
+        if (Owner.GetCharacterLevel() >= CharacterLevelRequirements)
+        {
+            IsLearnable = true;
+        }
     }
 }

@@ -21,14 +21,18 @@ public class SkillTree
 
         public bool UnLockSkills()
         {
+            bool unlock = true;
             foreach(ISkill sn in From)
             {
                 if (sn.IsUnlock() == false)
-                    return false;
-            }
-            foreach(ISkill sn in To)
+                    unlock = false;
+            }            
+            if(unlock == true)
             {
-                sn.UnLock();
+                foreach (ISkill sn in To)
+                {
+                    sn.UnLock();
+                }
             }
             return true;
         }
@@ -45,8 +49,28 @@ public class SkillTree
             //the item passed in to the function is all ready in the list when it
             //isn't. This does not happen all the time. 
             //Will devote more time to this problem later
-            To.Add(skill);
+            if(skill != null)
+                To.Add(skill);
         }
+    }
+
+    public void UnLockSkill(ISkill a)
+    {        
+        if(Skills.Contains(a))
+        {
+            foreach(SkillLink link in Links)
+            {
+                link.UnLockSkills();
+            }
+            a.UnLock();
+        }
+    }
+
+    public ISkill GetSkill(ISkill check)
+    {
+        if (check.IsUnlock())
+            return check;
+        return null;
     }
 
     public SkillTree()
